@@ -10,7 +10,7 @@ public class Health : MonoBehaviour
     private bool isInvincible = false;
 
     [SerializeField]
-    private float invincibilityDuration = 1.0f;
+    private float invincibilityDuration = 3.0f;
     private float invincibilityTimer = 0.0f;
 
     [SerializeField]
@@ -68,5 +68,12 @@ public class Health : MonoBehaviour
         {
             OnDie?.Invoke();
         }
+    }
+
+    public void AddInvinsibility(int Time)
+    {
+        isInvincible = true;
+        invincibilityDuration = Time;
+        invincibilityTimer = 0.0f;
     }
 }
