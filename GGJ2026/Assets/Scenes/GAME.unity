@@ -598,51 +598,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5977844083428121869, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4588022173219018016}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
 --- !u!4 &4588022173219018014 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8881870938222719431, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
   m_PrefabInstance: {fileID: 4588022173219018013}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4588022173219018015 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5977844083428121869, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
-  m_PrefabInstance: {fileID: 4588022173219018013}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4588022173219018016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4588022173219018015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: 
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 519420031}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
