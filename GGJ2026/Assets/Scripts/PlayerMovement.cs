@@ -1,21 +1,67 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Input settings")]
+    [SerializeField]
+    private PlayerInput _playerInput;
+    private InputAction _moveAction;
+
+    [Header("Movement settings")]
     [SerializeField]
     private float _movementSpeed = 5.0f;
+
+    //Variables to be rememebered
+    private Vector2 _movementInput;
+
+    [Header("GameJuice")]
+    [SerializeField]
+    private GameObject _playerVisualization;
+    [SerializeField]
+    private float _walkBobbingAmount = 0.5f;
+    [SerializeField]
+    private float _bobbingAmplitude = 10.0f;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Initialization code here
-
+        _moveAction = _playerInput.actions["Move"];
+        _moveAction.performed += ctx => UpdateMovementInput();
+        _moveAction.canceled += ctx => UpdateMovementInput();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        MovePlayer();
+        Bobbing();
+    }
+
+    private void UpdateMovementInput()
+    {
+        _movementInput = _moveAction.ReadValue<Vector2>();
+    }
+
+    private void MovePlayer()
+    {
+        Vector3 movement = new Vector3(_movementInput.x, _movementInput.y, 0);
+        transform.Translate(movement * _movementSpeed * Time.deltaTime, Space.World);
+    }
+
+    private void Bobbing()
+    {
+        //adjust X and Y scale of _playerVisualization based on movement input
+        if (_movementInput != Vector2.zero)
+        {
+            float bobbingX = 1 + Mathf.Sin(Time.time * _bobbingAmplitude) * _walkBobbingAmount;
+            float bobbingY = 1 + Mathf.Cos(Time.time * _bobbingAmplitude) * _walkBobbingAmount;
+            _playerVisualization.transform.localScale = new Vector3(bobbingX, bobbingY, 0);
+        }
+        else
+        {
+            _playerVisualization.transform.localScale = Vector3.one;
+        }
     }
 }
