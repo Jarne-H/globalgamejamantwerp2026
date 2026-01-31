@@ -1,0 +1,1105 @@
+fileFormatVersion: 2
+guid: 79a541d43d7f294479e1f027e0d6694c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4827819397112434814
+    second: bowReady_02_0
+  - first:
+      213: 4411163935006157007
+    second: bowReady_02_1
+  - first:
+      213: -4193645927923150963
+    second: bowReady_02_2
+  - first:
+      213: -2010227968514464102
+    second: bowReady_02_3
+  - first:
+      213: -1233445962808930624
+    second: bowReady_02_4
+  - first:
+      213: 2444434345277689728
+    second: bowReady_02_5
+  - first:
+      213: 7431653730528885735
+    second: bowReady_02_6
+  - first:
+      213: -8811868311163465015
+    second: bowReady_02_7
+  - first:
+      213: -8110897886568749355
+    second: bowReady_02_8
+  - first:
+      213: -869903945231181473
+    second: bowReady_02_9
+  - first:
+      213: 943273743555927159
+    second: bowReady_02_10
+  - first:
+      213: -3027422385003552013
+    second: bowReady_02_11
+  - first:
+      213: -7355290349515413449
+    second: bowReady_02_12
+  - first:
+      213: 1345143569424256344
+    second: bowReady_02_13
+  - first:
+      213: 2313112888091939218
+    second: bowReady_02_14
+  - first:
+      213: 8010613002818571662
+    second: bowReady_02_15
+  - first:
+      213: -8117358234332557904
+    second: bowReady_02_16
+  - first:
+      213: 5517843625648699578
+    second: bowReady_02_17
+  - first:
+      213: 6603812765459663825
+    second: bowReady_02_18
+  - first:
+      213: -6702752267767521665
+    second: bowReady_02_19
+  - first:
+      213: 706377110096929616
+    second: bowReady_02_20
+  - first:
+      213: -1293096464241191370
+    second: bowReady_02_21
+  - first:
+      213: 1476954247654701009
+    second: bowReady_02_22
+  - first:
+      213: -3307280045863085092
+    second: bowReady_02_23
+  - first:
+      213: 4561859187194806681
+    second: bowReady_02_24
+  - first:
+      213: 8298061579603076702
+    second: bowReady_02_25
+  - first:
+      213: -7158119857720251822
+    second: bowReady_02_26
+  - first:
+      213: 503511832714306390
+    second: bowReady_02_27
+  - first:
+      213: -6373956239368648927
+    second: bowReady_02_28
+  - first:
+      213: 6270280585049747438
+    second: bowReady_02_29
+  - first:
+      213: -114254253652463705
+    second: bowReady_02_30
+  - first:
+      213: 71658343233501958
+    second: bowReady_02_31
+  - first:
+      213: -1038545024563399461
+    second: bowReady_02_32
+  - first:
+      213: -3940603521614828898
+    second: bowReady_02_33
+  - first:
+      213: 8285461868396235015
+    second: bowReady_02_34
+  - first:
+      213: 7911950000990116579
+    second: bowReady_02_35
+  - first:
+      213: 8699002217484745900
+    second: bowReady_02_36
+  - first:
+      213: -697353206164349133
+    second: bowReady_02_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bowReady_02_0
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 612
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28f6f5356d3200db0800000000000000
+      internalID: -4827819397112434814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_1
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 588
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc86e004a3a973d30800000000000000
+      internalID: 4411163935006157007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_2
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 562
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f80685f3d2dc5c0800000000000000
+      internalID: -4193645927923150963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 538
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a96e323305c3a14e0800000000000000
+      internalID: -2010227968514464102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_4
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 511
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ce42219e6be1eee0800000000000000
+      internalID: -1233445962808930624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_5
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 386
+        width: 208
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08f8a0bf5106ce120800000000000000
+      internalID: 2444434345277689728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_6
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 360
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb71ed71b9822760800000000000000
+      internalID: 7431653730528885735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_7
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 359
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c294915574f5b580800000000000000
+      internalID: -8811868311163465015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_8
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 359
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d66a95785d407f80800000000000000
+      internalID: -8110897886568749355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_9
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 360
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f59d8c388fa7de3f0800000000000000
+      internalID: -869903945231181473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 333
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77c9a9ad87e271d00800000000000000
+      internalID: 943273743555927159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_11
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 333
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f22ccc716f6cf5d0800000000000000
+      internalID: -3027422385003552013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_12
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 333
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7386649a562cce990800000000000000
+      internalID: -7355290349515413449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_13
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 333
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85d0f6313f8eaa210800000000000000
+      internalID: 1345143569424256344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_14
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 303
+        width: 9
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29119149ae3d91020800000000000000
+      internalID: 2313112888091939218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_15
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 303
+        width: 8
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8d4022851a6b2f60800000000000000
+      internalID: 8010613002818571662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_16
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 273
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bd040881b9595f80800000000000000
+      internalID: -8117358234332557904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_17
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 276
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab8b1f0fa81539c40800000000000000
+      internalID: 5517843625648699578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_18
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 276
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dbc960c8b475ab50800000000000000
+      internalID: 6603812765459663825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_19
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 273
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7ed54e335a0bf2a0800000000000000
+      internalID: -6702752267767521665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_20
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 246
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0536bc43d3e8dc900800000000000000
+      internalID: 706377110096929616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_21
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 248
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 636179ced9ffd0ee0800000000000000
+      internalID: -1293096464241191370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_22
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 248
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d776f020123f7410800000000000000
+      internalID: 1476954247654701009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_23
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 246
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdbd79d225e2a12d0800000000000000
+      internalID: -3307280045863085092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_24
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 222
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9914910d2cafe4f30800000000000000
+      internalID: 4561859187194806681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_25
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 226
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e56ee88aa03a82370800000000000000
+      internalID: 8298061579603076702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_26
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 226
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25a2aec2aef39ac90800000000000000
+      internalID: -7158119857720251822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_27
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 221
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65364291855dcf600800000000000000
+      internalID: 503511832714306390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_28
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 204
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1270c8a22982b87a0800000000000000
+      internalID: -6373956239368648927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_29
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 208
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef2be188f2840750800000000000000
+      internalID: 6270280585049747438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_30
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 208
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7afa7f49c561a6ef0800000000000000
+      internalID: -114254253652463705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_31
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 204
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60b30ad22e49ef000800000000000000
+      internalID: 71658343233501958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_32
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 192
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd436a77dc85691f0800000000000000
+      internalID: -1038545024563399461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_33
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 197
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9aae7da9f92059c0800000000000000
+      internalID: -3940603521614828898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_34
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 0
+        width: 30
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7094dc9cbafdbf270800000000000000
+      internalID: 8285461868396235015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_35
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 187
+        width: 23
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eadaa94b94eccd60800000000000000
+      internalID: 7911950000990116579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_36
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 192
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cac73817d6019b870800000000000000
+      internalID: 8699002217484745900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowReady_02_37
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 197
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33f189724f08256f0800000000000000
+      internalID: -697353206164349133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bowReady_02_0: -4827819397112434814
+      bowReady_02_1: 4411163935006157007
+      bowReady_02_10: 943273743555927159
+      bowReady_02_11: -3027422385003552013
+      bowReady_02_12: -7355290349515413449
+      bowReady_02_13: 1345143569424256344
+      bowReady_02_14: 2313112888091939218
+      bowReady_02_15: 8010613002818571662
+      bowReady_02_16: -8117358234332557904
+      bowReady_02_17: 5517843625648699578
+      bowReady_02_18: 6603812765459663825
+      bowReady_02_19: -6702752267767521665
+      bowReady_02_2: -4193645927923150963
+      bowReady_02_20: 706377110096929616
+      bowReady_02_21: -1293096464241191370
+      bowReady_02_22: 1476954247654701009
+      bowReady_02_23: -3307280045863085092
+      bowReady_02_24: 4561859187194806681
+      bowReady_02_25: 8298061579603076702
+      bowReady_02_26: -7158119857720251822
+      bowReady_02_27: 503511832714306390
+      bowReady_02_28: -6373956239368648927
+      bowReady_02_29: 6270280585049747438
+      bowReady_02_3: -2010227968514464102
+      bowReady_02_30: -114254253652463705
+      bowReady_02_31: 71658343233501958
+      bowReady_02_32: -1038545024563399461
+      bowReady_02_33: -3940603521614828898
+      bowReady_02_34: 8285461868396235015
+      bowReady_02_35: 7911950000990116579
+      bowReady_02_36: 8699002217484745900
+      bowReady_02_37: -697353206164349133
+      bowReady_02_4: -1233445962808930624
+      bowReady_02_5: 2444434345277689728
+      bowReady_02_6: 7431653730528885735
+      bowReady_02_7: -8811868311163465015
+      bowReady_02_8: -8110897886568749355
+      bowReady_02_9: -869903945231181473
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

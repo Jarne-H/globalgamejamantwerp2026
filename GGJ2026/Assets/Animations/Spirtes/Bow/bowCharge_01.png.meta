@@ -1,0 +1,975 @@
+fileFormatVersion: 2
+guid: c0107d0c18929bb4284cb19af45542f8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2995628689699431745
+    second: bowCharge_01_0
+  - first:
+      213: -6042244160647656278
+    second: bowCharge_01_1
+  - first:
+      213: 8443259279702640255
+    second: bowCharge_01_2
+  - first:
+      213: -4117597614322876750
+    second: bowCharge_01_3
+  - first:
+      213: 1221349517228916456
+    second: bowCharge_01_4
+  - first:
+      213: -6712560937887914265
+    second: bowCharge_01_5
+  - first:
+      213: 8114635730633081928
+    second: bowCharge_01_6
+  - first:
+      213: 981315206880860984
+    second: bowCharge_01_7
+  - first:
+      213: 1817579003295215715
+    second: bowCharge_01_8
+  - first:
+      213: -7171228687748196889
+    second: bowCharge_01_9
+  - first:
+      213: 2013136639246182368
+    second: bowCharge_01_10
+  - first:
+      213: -5178074564871752067
+    second: bowCharge_01_11
+  - first:
+      213: -1877293598449646355
+    second: bowCharge_01_12
+  - first:
+      213: 6375564569713045114
+    second: bowCharge_01_13
+  - first:
+      213: -159668501722930364
+    second: bowCharge_01_14
+  - first:
+      213: 4050269522797863693
+    second: bowCharge_01_15
+  - first:
+      213: -1836357226482837930
+    second: bowCharge_01_16
+  - first:
+      213: 257815578484581339
+    second: bowCharge_01_17
+  - first:
+      213: -574164790635887257
+    second: bowCharge_01_18
+  - first:
+      213: -1772057123411219094
+    second: bowCharge_01_19
+  - first:
+      213: -7879616414320824933
+    second: bowCharge_01_20
+  - first:
+      213: 7575232482588292442
+    second: bowCharge_01_21
+  - first:
+      213: 3661562340968139498
+    second: bowCharge_01_22
+  - first:
+      213: 8548333305287467132
+    second: bowCharge_01_23
+  - first:
+      213: -2812891644745429649
+    second: bowCharge_01_24
+  - first:
+      213: 7019475077712484045
+    second: bowCharge_01_25
+  - first:
+      213: -3952550922901608046
+    second: bowCharge_01_26
+  - first:
+      213: -6407025121652574191
+    second: bowCharge_01_27
+  - first:
+      213: 2786247439957453553
+    second: bowCharge_01_28
+  - first:
+      213: 4435597825053683360
+    second: bowCharge_01_29
+  - first:
+      213: 405818687376927620
+    second: bowCharge_01_30
+  - first:
+      213: 4094829762412091491
+    second: bowCharge_01_31
+  - first:
+      213: -5090275324390202502
+    second: bowCharge_01_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bowCharge_01_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 386
+        width: 208
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fba1f7704936d66d0800000000000000
+      internalID: -2995628689699431745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 360
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aac0b66f2f2a52ca0800000000000000
+      internalID: -6042244160647656278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 359
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f764231a49b7c2570800000000000000
+      internalID: 8443259279702640255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_3
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 359
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bef94629ca5bd6c0800000000000000
+      internalID: -4117597614322876750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_4
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 360
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ee36093aea13f010800000000000000
+      internalID: 1221349517228916456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_5
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 333
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e62704446138d2a0800000000000000
+      internalID: -6712560937887914265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_6
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 333
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 844c31e243afc9070800000000000000
+      internalID: 8114635730633081928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_7
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 333
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b92de3bf45e9d00800000000000000
+      internalID: 981315206880860984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_8
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 333
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 360be9a3976593910800000000000000
+      internalID: 1817579003295215715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 303
+        width: 9
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e59da7d08daa7c90800000000000000
+      internalID: -7171228687748196889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_10
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 303
+        width: 8
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7a79a7b1910fb10800000000000000
+      internalID: 2013136639246182368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_11
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 273
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d76755c2e98c328b0800000000000000
+      internalID: -5178074564871752067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_12
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 276
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de44b452b6382f5e0800000000000000
+      internalID: -1877293598449646355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_13
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 276
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7eef4c623e8a7850800000000000000
+      internalID: 6375564569713045114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_14
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 273
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4436cf8f75eb8cdf0800000000000000
+      internalID: -159668501722930364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_15
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 246
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0325f6fba2753830800000000000000
+      internalID: 4050269522797863693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 248
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 656d4caf4d2f386e0800000000000000
+      internalID: -1836357226482837930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_17
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 248
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd3a22517e1f39300800000000000000
+      internalID: 257815578484581339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_18
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 246
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7658c9b3a282808f0800000000000000
+      internalID: -574164790635887257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_19
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 222
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6daf5d5f636867e0800000000000000
+      internalID: -1772057123411219094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_20
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 226
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9de1128e9af5a290800000000000000
+      internalID: -7879616414320824933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_21
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 226
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a55fcafbec1a02960800000000000000
+      internalID: 7575232482588292442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_22
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 221
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aea8a50ac8b70d230800000000000000
+      internalID: 3661562340968139498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_23
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 204
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c70ec43a9d7c1a670800000000000000
+      internalID: 8548333305287467132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_24
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 208
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6dc843d3f996f8d0800000000000000
+      internalID: -2812891644745429649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_25
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 208
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc692c4746f2a6160800000000000000
+      internalID: 7019475077712484045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_26
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 204
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 299aecb80e7b529c0800000000000000
+      internalID: -3952550922901608046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_27
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 192
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 118f4e4099ca517a0800000000000000
+      internalID: -6407025121652574191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_28
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 197
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa6103d84dbaa620800000000000000
+      internalID: 2786247439957453553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_29
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 119
+        width: 30
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aee1d898b86e8d30800000000000000
+      internalID: 4435597825053683360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_30
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 187
+        width: 23
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48b215032f1c1a500800000000000000
+      internalID: 405818687376927620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_31
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 192
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 368154c39f1c3d830800000000000000
+      internalID: 4094829762412091491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bowCharge_01_32
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 197
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7329c8df85bb59b0800000000000000
+      internalID: -5090275324390202502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bowCharge_01_0: -2995628689699431745
+      bowCharge_01_1: -6042244160647656278
+      bowCharge_01_10: 2013136639246182368
+      bowCharge_01_11: -5178074564871752067
+      bowCharge_01_12: -1877293598449646355
+      bowCharge_01_13: 6375564569713045114
+      bowCharge_01_14: -159668501722930364
+      bowCharge_01_15: 4050269522797863693
+      bowCharge_01_16: -1836357226482837930
+      bowCharge_01_17: 257815578484581339
+      bowCharge_01_18: -574164790635887257
+      bowCharge_01_19: -1772057123411219094
+      bowCharge_01_2: 8443259279702640255
+      bowCharge_01_20: -7879616414320824933
+      bowCharge_01_21: 7575232482588292442
+      bowCharge_01_22: 3661562340968139498
+      bowCharge_01_23: 8548333305287467132
+      bowCharge_01_24: -2812891644745429649
+      bowCharge_01_25: 7019475077712484045
+      bowCharge_01_26: -3952550922901608046
+      bowCharge_01_27: -6407025121652574191
+      bowCharge_01_28: 2786247439957453553
+      bowCharge_01_29: 4435597825053683360
+      bowCharge_01_3: -4117597614322876750
+      bowCharge_01_30: 405818687376927620
+      bowCharge_01_31: 4094829762412091491
+      bowCharge_01_32: -5090275324390202502
+      bowCharge_01_4: 1221349517228916456
+      bowCharge_01_5: -6712560937887914265
+      bowCharge_01_6: 8114635730633081928
+      bowCharge_01_7: 981315206880860984
+      bowCharge_01_8: 1817579003295215715
+      bowCharge_01_9: -7171228687748196889
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
