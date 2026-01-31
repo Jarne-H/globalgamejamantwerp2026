@@ -178,7 +178,9 @@ MonoBehaviour:
   _chargeSpeed: 7
   _chargeCooldown: 2
   _chargeAdditionalDistance: 5
+  _chargeRadius: 5
   _chargeAccelerationTime: 1
+  _chargeDecelerationTime: 0.5
 --- !u!4 &9053642048575450223 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8881870938222719431, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
