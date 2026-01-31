@@ -152,6 +152,11 @@ Transform:
   - {fileID: 1868546126}
   m_Father: {fileID: 918671955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &297788687 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8021703576601564429, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
+  m_PrefabInstance: {fileID: 4588022173219018013}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,6 +336,11 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5728333440834459599, guid: d8e6398f2d761764bb83fd0f232c20e5, type: 3}
   m_PrefabInstance: {fileID: 7451237066912845846}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1520377478 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1235846881708239941, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
+  m_PrefabInstance: {fileID: 4588022173219018013}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1689479087
 GameObject:
@@ -529,6 +539,14 @@ PrefabInstance:
       propertyPath: _multishotSpreadAngle
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1066733674689688640, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
+      propertyPath: _arrowLookAtLeftTransform
+      value: 
+      objectReference: {fileID: 1520377478}
+    - target: {fileID: 1066733674689688640, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
+      propertyPath: _arrowLookAtRightTransform
+      value: 
+      objectReference: {fileID: 297788687}
     - target: {fileID: 1956459236112733203, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
       propertyPath: _gameManager
       value: 
