@@ -20,6 +20,7 @@ public class EnemyMovementAngry : EnemyMovement
     [SerializeField]
     private float _chargePreparationTime = 2.0f;
     private float _chargePreparationElapsedTime = 0f;
+    private bool _chargePreparationFinished = true;
 
     [Header("ChargeSmoothing")]
     [SerializeField]
@@ -61,15 +62,22 @@ public class EnemyMovementAngry : EnemyMovement
         {
             if(_chargePreparationElapsedTime < _chargePreparationTime)
             {
-                // change animation to charge preparation
                 _chargePreparationElapsedTime += Time.deltaTime;
                 return;
+            }
+            else
+            {
+                if (!_chargePreparationFinished)
+                {
+                    _chargePreparationFinished = true;
+                    Vector3 playerDirection = (PlayerTransform.position - transform.position).normalized;
+                    _chargeTarget = PlayerTransform.position + playerDirection * _chargeAdditionalDistance;
+                }
             }
             _animator.SetBool("IsDashing", true);
             _animator.SetBool("IsCharging", false);
 
 
-            // change animation to charging
 
             _timeSinceChargeStart += Time.deltaTime;
             float chargeSpeed = _chargeSpeed;
@@ -118,13 +126,12 @@ public class EnemyMovementAngry : EnemyMovement
 
             if ((PlayerTransform.position - transform.position).magnitude < _chargeRadius && _timeSinceLastCharge > _chargeCooldown)
             {
-                Vector3 playerDirection = (PlayerTransform.position - transform.position).normalized;
-                _chargeTarget = PlayerTransform.position + playerDirection * _chargeAdditionalDistance;
                 _chargeOriginalPosition = transform.position;
                 _isCharging = true;
                 _animator.SetBool("IsCharging", true);
                 _timeSinceChargeStart = 0f;
                 _chargePreparationElapsedTime = 0f;
+                _chargePreparationFinished = false;
             }
         }
 
