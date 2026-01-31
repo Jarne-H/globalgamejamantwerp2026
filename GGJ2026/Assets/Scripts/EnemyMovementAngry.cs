@@ -43,8 +43,15 @@ public class EnemyMovementAngry : EnemyMovement
             if (Mathf.Abs(posToTargetDirection.x - targetToOriginalPosDirection.x) < 0.001 &&
                 Mathf.Abs(posToTargetDirection.y - targetToOriginalPosDirection.y) < 0.001)
             {
-                _isCharging = false;
-                _timeSinceLastCharge = 0f;
+                _timeSinceChargeEnd += Time.deltaTime;
+                if(_timeSinceChargeEnd > _chargeAccelerationTime)
+                {
+                    _isCharging = false;
+                    _timeSinceLastCharge = 0f;
+                    _timeSinceChargeEnd = 0f;
+                    _timeSinceChargeStart = 0f;
+                }
+
             }
         }
         else if(_timeSinceLastCharge > _chargeCooldown)
