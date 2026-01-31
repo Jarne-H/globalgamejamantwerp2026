@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemyMovementAngry : EnemyMovement
 {
@@ -28,6 +29,7 @@ public class EnemyMovementAngry : EnemyMovement
     //private float _chargeEndIdleTime = 0.2f;
     //private float _chargeIdleTime = 0f;
 
+    private bool _facingLeft = true;
 
     private Vector3 _chargeTarget;
     private Vector3 _chargeOriginalPosition;
@@ -80,7 +82,19 @@ public class EnemyMovementAngry : EnemyMovement
 
             transform.position += (PlayerTransform.position - transform.position).normalized * _movementSpeed * Time.deltaTime;
 
-            if((PlayerTransform.position - transform.position).magnitude < _chargeRadius && _timeSinceLastCharge > _chargeCooldown)
+            Vector3 movementDirection = PlayerTransform.position - transform.position;
+            if (movementDirection.x < 0 && !_facingLeft)
+            {
+                GetComponentInChildren<SpriteRenderer>().flipX = true;
+                _facingLeft = true;
+            }
+            else if (movementDirection.x > 0 && _facingLeft)
+            {
+                GetComponentInChildren<SpriteRenderer>().flipX = false;
+                _facingLeft = false;
+            }
+
+            if ((PlayerTransform.position - transform.position).magnitude < _chargeRadius && _timeSinceLastCharge > _chargeCooldown)
             {
                 Vector3 playerDirection = (PlayerTransform.position - transform.position).normalized;
                 _chargeTarget = PlayerTransform.position + playerDirection * _chargeAdditionalDistance;

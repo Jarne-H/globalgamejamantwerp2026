@@ -19,6 +19,9 @@ public class EnemyMovementCalm : EnemyMovement
     private float _angleChangeCooldown = 2f;
     private float _timeSinceLastAngleChange = 0f;
 
+    private bool _facingLeft = true;
+
+
     private void Start()
     {
         Vector3 playerDirection = (PlayerTransform.position - transform.position).normalized;
@@ -42,5 +45,16 @@ public class EnemyMovementCalm : EnemyMovement
 
         Vector3 movementDirection = new Vector3(Mathf.Cos(Mathf.Deg2Rad * _movementDirectionAngle), Mathf.Sin(Mathf.Deg2Rad * _movementDirectionAngle), 0).normalized;
         transform.position += movementDirection * _movementSpeed * Time.deltaTime;
+
+        if (movementDirection.x < 0 && !_facingLeft)
+        {
+            GetComponentInChildren<SpriteRenderer>().flipX = true;
+            _facingLeft = true;
+        }
+        else if (movementDirection.x > 0 && _facingLeft)
+        {
+            GetComponentInChildren<SpriteRenderer>().flipX = false;
+            _facingLeft = false;
+        }
     }
 }

@@ -8,13 +8,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1007287534641887013, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007287534641887013, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1177036334383374855, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5104956227323117129, guid: 0487793009a82cb4a9ab1bd692eeaa40, type: 3}
     - target: {fileID: 1779877031073695205, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
       propertyPath: _distanceMaxWaveOffset
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3474148695173427431, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474148695173427431, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474148695173427431, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780306360994272928, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 405073179e50a7343a49edaecaab272f, type: 2}
     - target: {fileID: 5977844083428121869, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
       propertyPath: m_Name
-      value: EnemyAngry
+      value: EnemySad
       objectReference: {fileID: 0}
     - target: {fileID: 8881870938222719431, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
       propertyPath: m_LocalPosition.x
@@ -62,14 +90,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5977844083428121869, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
       insertIndex: 3
-      addedObject: {fileID: 4376317718948834325}
+      addedObject: {fileID: -1645968102207887676}
   m_SourcePrefab: {fileID: 100100000, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
 --- !u!1 &6058415117864206501 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5977844083428121869, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
   m_PrefabInstance: {fileID: 497157337736306088}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4376317718948834325
+--- !u!114 &-1645968102207887676
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,13 +106,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6058415117864206501}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13c4572914291ce41a4c6a6e96e3fad9, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f899b93856cb6540b89e4f4e476340b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementAngry
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementSad
   _movementSpeed: 2
-  _chargeSpeed: 7
-  _chargeCooldown: 2
-  _chargeAdditionalDistance: 5
-  _chargeRadius: 5
-  _chargeAccelerationTime: 1
-  _chargeDecelerationTime: 0.5
+  _waveOffset: 2
+  _waveFrequency: 4
+  _distanceMaxWaveOffset: 4

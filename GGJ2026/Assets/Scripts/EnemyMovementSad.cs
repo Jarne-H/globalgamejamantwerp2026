@@ -14,6 +14,8 @@ public class EnemyMovementSad : EnemyMovement
 
     private float _elapsedTime = 0f;
 
+    private bool _facingLeft = true;
+
 
     // Update is called once per frame
     void Update()
@@ -26,6 +28,16 @@ public class EnemyMovementSad : EnemyMovement
         }
         _elapsedTime += Time.deltaTime;
         Vector3 movementDirection = (PlayerTransform.position - transform.position).normalized;
+        if (movementDirection.x < 0 && !_facingLeft)
+        {
+            GetComponentInChildren<SpriteRenderer>().flipX = true;
+            _facingLeft = true;
+        }
+        else if (movementDirection.x > 0 && _facingLeft)
+        {
+            GetComponentInChildren<SpriteRenderer>().flipX = false;
+            _facingLeft = false;
+        }
         transform.position += movementDirection * _movementSpeed * Time.deltaTime + new Vector3(movementDirection.y, movementDirection.x, 0f) * _waveOffsetCalculated * Mathf.Sin(_elapsedTime * _waveFrequency) * Time.deltaTime;
     }
 }
