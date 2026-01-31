@@ -173,6 +173,7 @@ MonoBehaviour:
   _movementSpeed: 2
   _waveOffset: 2
   _waveFrequency: 4
+  _distanceMaxWaveOffset: 4
   _playerPosition: {fileID: 0}
 --- !u!4 &9053642048575450223 stripped
 Transform:
