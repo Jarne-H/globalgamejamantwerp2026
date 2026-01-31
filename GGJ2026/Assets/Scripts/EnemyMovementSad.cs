@@ -14,7 +14,7 @@ public class EnemyMovementSad : EnemyMovement
 
     private float _elapsedTime = 0f;
 
-    private bool _facingLeft = true;
+    private bool _facingLeft;
 
     private void Start()
     {

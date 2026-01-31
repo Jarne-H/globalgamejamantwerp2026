@@ -19,7 +19,7 @@ public class EnemyMovementCalm : EnemyMovement
     private float _angleChangeCooldown = 2f;
     private float _timeSinceLastAngleChange = 0f;
 
-    private bool _facingLeft = true;
+    private bool _facingLeft;
 
 
     private void Start()
@@ -38,7 +38,7 @@ public class EnemyMovementCalm : EnemyMovement
         }
 
     }
-    // Update is called once per frame
+
     void Update()
     {
         Vector3 playerDirection = (PlayerTransform.position - transform.position).normalized;
