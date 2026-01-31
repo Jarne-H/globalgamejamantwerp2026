@@ -28,6 +28,10 @@ PrefabInstance:
       propertyPath: '_enemyPrefabs.Array.data[2]'
       value: 
       objectReference: {fileID: 7082634850838212035, guid: a469d14456cd15c469026d1d58b56589, type: 3}
+    - target: {fileID: 3473297939820068398, guid: 08a9e6361c7a1714998e65974dd99a95, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4641495707711886710, guid: 08a9e6361c7a1714998e65974dd99a95, type: 3}
       propertyPath: m_Sprite
       value: 

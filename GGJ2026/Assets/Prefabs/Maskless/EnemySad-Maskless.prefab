@@ -44,6 +44,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3473297939820068398, guid: e4d4f6c9272785542b31d159e26f9100, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6058415117864206501, guid: e4d4f6c9272785542b31d159e26f9100, type: 3}
       propertyPath: m_Name
       value: EnemySad-Maskless

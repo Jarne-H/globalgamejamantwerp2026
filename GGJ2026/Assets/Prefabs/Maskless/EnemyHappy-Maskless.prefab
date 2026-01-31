@@ -32,6 +32,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: e8c0399854687cb439f3d0e5e1f109d7, type: 3}
+    - target: {fileID: 3473297939820068398, guid: b6361723cdb5f6e4581529e67598a0b2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6058415117864206501, guid: b6361723cdb5f6e4581529e67598a0b2, type: 3}
       propertyPath: m_Name
       value: EnemyHappy-Maskless
