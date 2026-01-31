@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("GameJuice")]
     [SerializeField]
+    private GameManager _gameManager;
+    [SerializeField]
     private GameObject _playerVisualization;
     [SerializeField]
     private float _walkBobbingAmount = 0.5f;
@@ -30,13 +32,24 @@ public class PlayerMovement : MonoBehaviour
         _moveAction = _playerInput.actions["Move"];
         _moveAction.performed += ctx => UpdateMovementInput();
         _moveAction.canceled += ctx => UpdateMovementInput();
+        if (_gameManager == null)
+        {
+            _gameManager = GameManager.Instance;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        MovePlayer();
-        Bobbing();
+        if (_gameManager == null)
+        {
+            _gameManager = GameManager.Instance;
+        }
+        if (_gameManager.GameIsActive)
+        {
+            MovePlayer();
+            MovementAnimation();
+        }
     }
 
     private void UpdateMovementInput()
@@ -46,11 +59,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        Vector3 movement = new Vector3(_movementInput.x, _movementInput.y, 0);
+        //when moving left, flip the sprite renderer on X axis
+        if (_movementInput.x < 0)
+        {
+            _playerVisualization.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else if (_movementInput.x > 0)
+        {
+            _playerVisualization.GetComponent<SpriteRenderer>().flipX = false;
+        }
+            Vector3 movement = new Vector3(_movementInput.x, _movementInput.y, 0);
         transform.Translate(movement * _movementSpeed * Time.deltaTime, Space.World);
     }
 
-    private void Bobbing()
+    private void MovementAnimation()
     {
         //adjust X and Y scale of _playerVisualization based on movement input
         if (_movementInput != Vector2.zero)
@@ -58,10 +80,20 @@ public class PlayerMovement : MonoBehaviour
             float bobbingX = 1 + Mathf.Sin(Time.time * _bobbingAmplitude) * _walkBobbingAmount;
             float bobbingY = 1 + Mathf.Cos(Time.time * _bobbingAmplitude) * _walkBobbingAmount;
             _playerVisualization.transform.localScale = new Vector3(bobbingX, bobbingY, 0);
+            Animator animator = _playerVisualization.GetComponent<Animator>();
+            if (animator != null)
+            {
+                animator.SetBool("IsRunning", true);
+            }
         }
         else
         {
             _playerVisualization.transform.localScale = Vector3.one;
+            Animator animator = _playerVisualization.GetComponent<Animator>();
+            if (animator != null)
+            {
+                animator.SetBool("IsRunning", false);
+            }
         }
     }
 }
