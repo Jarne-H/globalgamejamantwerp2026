@@ -182,6 +182,7 @@ MonoBehaviour:
   _chargeCooldown: 2
   _chargeAdditionalDistance: 5
   _chargeRadius: 5
+  _chargePreparationTime: 1
   _chargeAccelerationTime: 1
   _chargeDecelerationTime: 0.5
   _animator: {fileID: 6255930841495423752}

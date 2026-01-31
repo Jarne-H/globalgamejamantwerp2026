@@ -42,6 +42,18 @@ public class EnemyMovementAngry : EnemyMovement
     [SerializeField]
     private Animator _animator;
 
+    private void Start()
+    {
+        if(PlayerTransform.position.x < transform.position.x)
+        {
+            _facingLeft = false;
+        }
+        else
+        {
+            _facingLeft = true;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -53,6 +65,10 @@ public class EnemyMovementAngry : EnemyMovement
                 _chargePreparationElapsedTime += Time.deltaTime;
                 return;
             }
+            _animator.SetBool("IsDashing", true);
+            _animator.SetBool("IsCharging", false);
+
+
             // change animation to charging
 
             _timeSinceChargeStart += Time.deltaTime;
@@ -76,7 +92,7 @@ public class EnemyMovementAngry : EnemyMovement
                 if(_timeSinceChargeEnd > _chargeDecelerationTime)
                 {
                     _isCharging = false;
-                    _animator.SetBool("IsCharging", false);
+                    _animator.SetBool("IsDashing", false);
                     _timeSinceLastCharge = 0f;
                     _timeSinceChargeEnd = 0f;
                 }
