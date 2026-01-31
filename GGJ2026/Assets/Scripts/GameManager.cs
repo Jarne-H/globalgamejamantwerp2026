@@ -1,4 +1,6 @@
+using NUnit.Framework;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -27,6 +29,14 @@ public class GameManager : MonoBehaviour
     private float _invincibilityDuration = 5.0f;
     private float _invincibilityElapsedTime = 0f;
 
+    [SerializeField]
+    private List<GameObject> _happyMeterSprites = new List<GameObject>();
+    [SerializeField]
+    private List<GameObject> _sadMeterSprites = new List<GameObject>();
+    [SerializeField]
+    private List<GameObject> _calmMeterSprites = new List<GameObject>();
+    [SerializeField]
+    private List<GameObject> _angryMeterSprites = new List<GameObject>();
 
     public int _happyValue;
     public int _sadValue;
@@ -99,6 +109,25 @@ public class GameManager : MonoBehaviour
                 _invincibilityEnabled = false;
             }
         }
+
+        //visualise meter values and their sprites
+        for(int i = 0; i < _happyMeterSprites.Count; i++)
+        {
+            _happyMeterSprites[i].SetActive(i < _happyValue);
+        }
+        for (int i = 0; i < _sadMeterSprites.Count; i++)
+        {
+            _sadMeterSprites[i].SetActive(i < _sadValue);
+        }
+        for (int i = 0; i < _calmMeterSprites.Count; i++)
+        {
+            _calmMeterSprites[i].SetActive(i < _calmValue);
+        }
+        for (int i = 0; i < _angryMeterSprites.Count; i++)
+        {
+            _angryMeterSprites[i].SetActive(i < _angryValue);
+        }
+
     }
 
     public void TriggerResetGame()

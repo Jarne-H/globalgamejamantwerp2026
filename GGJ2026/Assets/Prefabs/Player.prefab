@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArrowSpawner
   _playerInput: {fileID: 0}
-  _chargingTime: 3.4
+  _chargingTime: 2.3
   _arrowPrefab: {fileID: 5933484707961651746, guid: 26814b5ea693f854b93d003515da8d1e, type: 3}
   _visualisation: {fileID: 2773614523699784542}
   _originalVisualisationScale: {x: 1, y: 1, z: 1}
