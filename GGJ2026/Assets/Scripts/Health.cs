@@ -56,7 +56,7 @@ public class Health : MonoBehaviour
 
         if (_gameManager == null)
         {
-            _gameManager = GameManager.Instance;
+            _gameManager = FindAnyObjectByType<GameManager>();
         }
     }
 
@@ -66,7 +66,7 @@ public class Health : MonoBehaviour
 
         if (_gameManager == null)
         {
-            _gameManager = GameManager.Instance;
+            _gameManager = FindAnyObjectByType<GameManager>();
         }
 
         if (_gameManager.GameIsActive)
@@ -157,7 +157,7 @@ public class Health : MonoBehaviour
     {
         if (_gameManager == null)
         {
-            _gameManager = GameManager.Instance;
+            _gameManager = FindAnyObjectByType<GameManager>();
         }
 
         //start coroutine to reset the game and wait for it to finish
