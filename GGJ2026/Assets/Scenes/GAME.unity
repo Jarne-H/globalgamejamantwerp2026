@@ -283,8 +283,8 @@ MonoBehaviour:
   _enemyPrefabs:
   - {fileID: 6058415117864206501, guid: e4d4f6c9272785542b31d159e26f9100, type: 3}
   - {fileID: 6058415117864206501, guid: 7c64239e34e63504ba76a664073b9158, type: 3}
-  - {fileID: 6058415117864206501, guid: 7c64239e34e63504ba76a664073b9158, type: 3}
-  - {fileID: 6058415117864206501, guid: 7c64239e34e63504ba76a664073b9158, type: 3}
+  - {fileID: 6058415117864206501, guid: b6361723cdb5f6e4581529e67598a0b2, type: 3}
+  - {fileID: 6058415117864206501, guid: 08a9e6361c7a1714998e65974dd99a95, type: 3}
   _timeBetweenSpawns: 3
   _spawnTimeMultiplier: 0.9
   _spawnTimeMultiplyCooldown: 10
