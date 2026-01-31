@@ -98,6 +98,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1779877031073695205, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
+      propertyPath: _distanceMaxWaveOffset
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5977844083428121869, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
       propertyPath: m_Name
       value: EnemySad
@@ -150,15 +154,15 @@ PrefabInstance:
       addedObject: {fileID: 800756021818714765}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5977844083428121869, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -7037677833471780787}
+      insertIndex: 3
+      addedObject: {fileID: -1645968102207887676}
   m_SourcePrefab: {fileID: 100100000, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
 --- !u!1 &6058415117864206501 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5977844083428121869, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
   m_PrefabInstance: {fileID: 497157337736306088}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-7037677833471780787
+--- !u!114 &-1645968102207887676
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,7 +178,6 @@ MonoBehaviour:
   _waveOffset: 2
   _waveFrequency: 4
   _distanceMaxWaveOffset: 4
-  _playerPosition: {fileID: 0}
 --- !u!4 &9053642048575450223 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8881870938222719431, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}

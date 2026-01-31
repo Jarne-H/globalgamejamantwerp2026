@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8881870938222719431}
   - component: {fileID: 546226310174514508}
   - component: {fileID: 3474148695173427431}
+  - component: {fileID: 1460427103480155464}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
@@ -95,3 +96,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1460427103480155464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5977844083428121869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737c6ccc2ee909440a4da241338be564, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement

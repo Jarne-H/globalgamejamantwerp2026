@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyMovementSad : MonoBehaviour
+public class EnemyMovementSad : EnemyMovement
 {
     [SerializeField]
     private float _movementSpeed = 5.0f;
@@ -14,20 +14,18 @@ public class EnemyMovementSad : MonoBehaviour
 
     private float _elapsedTime = 0f;
 
-    [SerializeField]
-    private Transform _playerPosition;
 
     // Update is called once per frame
     void Update()
     {
-        float distance = (_playerPosition.position - transform.position).magnitude;
+        float distance = (PlayerTransform.position - transform.position).magnitude;
         _waveOffsetCalculated = _waveOffset;
         if (distance < _distanceMaxWaveOffset)
         {
             _waveOffsetCalculated = _waveOffset * distance / _distanceMaxWaveOffset;
         }
         _elapsedTime += Time.deltaTime;
-        Vector3 movementDirection = (_playerPosition.position - transform.position).normalized;
+        Vector3 movementDirection = (PlayerTransform.position - transform.position).normalized;
         transform.position += movementDirection * _movementSpeed * Time.deltaTime + new Vector3(movementDirection.y, movementDirection.x, 0f) * _waveOffsetCalculated * Mathf.Sin(_elapsedTime * _waveFrequency) * Time.deltaTime;
     }
 }
