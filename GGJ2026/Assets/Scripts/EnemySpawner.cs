@@ -48,6 +48,9 @@ public class EnemySpawner : MonoBehaviour
         if (invertedY) { y = -1; }
         else { y = 1; }
 
-            //enemyMovement.transform = _playerTransform + new Vector3(x * _enemySpawnDistanceMinX);
+        enemyMovement.transform.position = _playerTransform.position + new Vector3(
+            x * _enemySpawnDistanceMinX + UnityEngine.Random.Range(0, _enemySpawnDistanceMaxX - _enemySpawnDistanceMinX),
+            y * _enemySpawnDistanceMinY + UnityEngine.Random.Range(0, _enemySpawnDistanceMaxY - _enemySpawnDistanceMinY),
+            0);
     }
 }

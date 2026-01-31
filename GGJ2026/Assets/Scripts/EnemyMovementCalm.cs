@@ -27,6 +27,16 @@ public class EnemyMovementCalm : EnemyMovement
         Vector3 playerDirection = (PlayerTransform.position - transform.position).normalized;
         float playerAngle = Mathf.Rad2Deg * Mathf.Atan2(playerDirection.y, playerDirection.x);
         _movementDirectionAngle = playerAngle;
+
+        if (PlayerTransform.position.x < transform.position.x)
+        {
+            _facingLeft = false;
+        }
+        else
+        {
+            _facingLeft = true;
+        }
+
     }
     // Update is called once per frame
     void Update()
