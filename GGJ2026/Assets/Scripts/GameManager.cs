@@ -21,17 +21,6 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //if there is already an instance of GameManager, destroy this one
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
-
         //fade in
         float timer = 0.0f;
         while (timer < _fadeDuration)
@@ -65,15 +54,5 @@ public class GameManager : MonoBehaviour
         _fade.alpha = 1.0f;
         //reload the current scene
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-        //fade back in
-        timer = 0.0f;
-        while (timer < _fadeDuration)
-        {
-            timer += Time.deltaTime;
-            _fade.alpha = Mathf.Lerp(1.0f, 0.0f, timer / _fadeDuration);
-        }
-        _fade.alpha = 0.0f;
-        //enable player input
-        GameIsActive = true;
     }
 }

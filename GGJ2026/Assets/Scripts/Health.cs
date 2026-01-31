@@ -11,17 +11,20 @@ public class Health : MonoBehaviour
     private int _currentLives;
 
     [SerializeField]
+    private float _healthRegenRate = 0.0f;//amount of time between regenerating 1 health point
+    private float _healthRegenTimer = 0.0f;
+
+    [Header("Invincibility settings")]
+    [SerializeField]
     private bool _isInvincible = false;
 
     [SerializeField]
     private float _invincibilityDurationAtStart = 3.0f;
     private float _invincibilityCurrentDuration = 0.0f;
     [SerializeField]
-    private float _invincibilityTimeAfterDeath = 2.8f;
-
+    private float _invincibilityTimeAfterDamage = 2.8f;
     [SerializeField]
-    private float _healthRegenRate = 0.0f;//amount of time between regenerating 1 health point
-    private float _healthRegenTimer = 0.0f;
+    private GameObject _invincibilityShield;
 
     //die event
     public delegate void DieEvent();
@@ -37,6 +40,12 @@ public class Health : MonoBehaviour
     [SerializeField]
     private bool _isEnemy = false;
 
+    [Header("Enemy death settings")]
+
+    [Header("GameJuice")]
+    [SerializeField]
+    private GameManager _gameManager;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,57 +53,79 @@ public class Health : MonoBehaviour
         _currentHealth = _maxHealth;
         _currentLives = _maxLives;
         _invincibilityCurrentDuration = _invincibilityDurationAtStart;
+
+        if (_gameManager == null)
+        {
+            _gameManager = GameManager.Instance;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_isInvincible)
+
+        if (_gameManager == null)
         {
-            _invincibilityCurrentDuration -= Time.deltaTime;
-            if (_invincibilityCurrentDuration <= 0.0f)
-            {
-                _isInvincible = false;
-                _invincibilityCurrentDuration = _invincibilityDurationAtStart;
-            }
+            _gameManager = GameManager.Instance;
         }
 
-        if (_healthRegenRate > 0 && _currentHealth < _maxHealth)
+        if (_gameManager.GameIsActive)
         {
-            _healthRegenTimer += Time.deltaTime;
-            if (_healthRegenTimer >= _healthRegenRate)
+            if (_isInvincible)
             {
-                AdjustHealth(1);
-                _healthRegenTimer = 0.0f;
-            }
-        }
-        if (_isPlayer)
-        {
-            if (_currentHealth <= 0)
-            {
-                _currentLives--;
-                if (_currentLives > 0)
+                if (_invincibilityShield != null)
                 {
-                    _currentHealth = _maxHealth;
-
-                    if (_isPlayer)
-                    {
-                        HandlePlayerRespawn();
-                    }
-                    else if (_isEnemy)
-                    {
-                        HandleEnemyRespawn();
-                    }
+                    _invincibilityShield.SetActive(true);
                 }
-                else
+                _invincibilityCurrentDuration -= Time.deltaTime;
+                if (_invincibilityCurrentDuration <= 0.0f)
                 {
-                    if (_isPlayer)
+                    _isInvincible = false;
+                    _invincibilityCurrentDuration = _invincibilityDurationAtStart;
+                }
+            }
+            else if (_invincibilityShield != null && _invincibilityShield.activeSelf)
+            {
+                _invincibilityShield.SetActive(false);
+            }
+
+            if (_healthRegenRate > 0 && _currentHealth < _maxHealth)
+            {
+                _healthRegenTimer += Time.deltaTime;
+                if (_healthRegenTimer >= _healthRegenRate)
+                {
+                    AdjustHealth(1);
+                    _healthRegenTimer = 0.0f;
+                }
+            }
+            if (_isPlayer)
+            {
+                if (_currentHealth <= 0)
+                {
+                    _currentLives--;
+                    if (_currentLives > 0)
                     {
-                        HandlePlayerDeath();
+                        _currentHealth = _maxHealth;
+
+                        if (_isPlayer)
+                        {
+                            HandlePlayerRespawn();
+                        }
+                        else if (_isEnemy)
+                        {
+                            HandleEnemyRespawn();
+                        }
                     }
-                    else if (_isEnemy)
+                    else
                     {
-                        HandleEnemyDeath();
+                        if (_isPlayer)
+                        {
+                            HandlePlayerDeath();
+                        }
+                        else if (_isEnemy)
+                        {
+                            HandleEnemyDeath();
+                        }
                     }
                 }
             }
@@ -124,9 +155,13 @@ public class Health : MonoBehaviour
 
     private void HandlePlayerDeath()
     {
-        //reset current scene
-        string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(currentSceneName);
+        if (_gameManager == null)
+        {
+            _gameManager = GameManager.Instance;
+        }
+
+        //start coroutine to reset the game and wait for it to finish
+        _gameManager.TriggerResetGame();
     }
 
     private void HandleEnemyDeath()
@@ -144,17 +179,11 @@ public class Health : MonoBehaviour
 
     private void HandlePlayerRespawn()
     {
-        //find all objects with tag "enemy" and destroy them if they are visible on screen with a 5% margin
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach (GameObject enemy in enemies)
+        if (_isPlayer)
         {
-            Vector3 screenPoint = Camera.main.WorldToViewportPoint(enemy.transform.position);
-            if (screenPoint.x >= -0.05f && screenPoint.x <= 1.05f && screenPoint.y >= -0.05f && screenPoint.y <= 1.05f)
-            {
-                Destroy(enemy);
-            }
+            _isInvincible = true;
+            _invincibilityCurrentDuration = _invincibilityTimeAfterDamage;
         }
-
         // Implement player respawn logic here (e.g., reset position, play animation, etc.)
         Debug.Log("Player respawned. Lives left: " + _currentLives);
     }
@@ -170,11 +199,16 @@ public class Health : MonoBehaviour
         _currentLives++;
     }
 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (_isPlayer && collision.gameObject.CompareTag("Enemy"))
+        if (_gameManager.GameIsActive)
         {
-            AdjustHealth(-1);
+            Debug.Log("Collision detected with " + collision.gameObject.name);
+            if (_isPlayer && collision.gameObject.CompareTag("Enemy"))
+            {
+                AdjustHealth(-1);
+            }
         }
     }
 }

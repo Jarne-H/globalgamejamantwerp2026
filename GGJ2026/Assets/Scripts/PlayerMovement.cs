@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
             if (animator != null)
             {
                 animator.SetBool("IsRunning", false);
-            }
+            }   
         }
     }
 }
