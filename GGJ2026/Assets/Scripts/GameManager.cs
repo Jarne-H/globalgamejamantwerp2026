@@ -18,14 +18,29 @@ public class GameManager : MonoBehaviour
     private float _fadeDuration = 0.2f;
     public float FadeDuration => _fadeDuration;
 
-    private int _happySadValue = 0;
-    public int HappySadValue { get { return _happySadValue; } set { _happySadValue = value; } }
+    [SerializeField]
+    private int _requiredValueForBoost = 6;
+    [SerializeField]
+    private float _speedBoostDuration = 5.0f;
+    private float _speedBoostElapsedTime = 0f;
+    [SerializeField]
+    private float _invincibilityDuration = 5.0f;
+    private float _invincibilityElapsedTime = 0f;
 
-    private int _calmAngryValue = 0;
-    public int CalmAngryValue { get { return _calmAngryValue; } set { _calmAngryValue = value; } }
+
+    public int _happyValue;
+    public int _sadValue;
+    public int _calmValue;
+    public int _angryValue;
+    
 
     private int _score = 0;
     public int Score {  get { return _score; } set { _score = value; } }
+
+    public bool _speedBoostEnabled = false;
+    public bool _invincibilityEnabled = false;
+    public int _nextArrowsMultiShot = 0;
+    public int _nextArrowsPiercing = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -41,6 +56,49 @@ public class GameManager : MonoBehaviour
         //enable player input
         GameIsActive = true;
         _playerInput.enabled = true;
+    }
+
+    private void Update()
+    {
+        if(_happyValue >= _requiredValueForBoost)
+        {
+            _happyValue = 0; _sadValue = 0; _calmValue = 0; _angryValue = 0;
+            _nextArrowsPiercing = 1;
+        }
+        if(_sadValue >= _requiredValueForBoost)
+        {
+            _happyValue = 0; _sadValue = 0; _calmValue = 0; _angryValue = 0;
+            _nextArrowsMultiShot = 1;
+        }
+        if (_calmValue >= _requiredValueForBoost)
+        {
+            _happyValue = 0; _sadValue = 0; _calmValue = 0; _angryValue = 0;
+            _invincibilityEnabled = true;
+        }
+        if (_angryValue >= _requiredValueForBoost)
+        {
+            _happyValue = 0; _sadValue = 0; _calmValue = 0; _angryValue = 0;
+            _speedBoostEnabled = true;
+        }
+
+        if (_speedBoostEnabled)
+        {
+            _speedBoostElapsedTime += Time.deltaTime;
+            if(_speedBoostElapsedTime > _speedBoostDuration)
+            {
+                _speedBoostElapsedTime = 0.0f;
+                _speedBoostEnabled = false;
+            }
+        }
+        if (_invincibilityEnabled)
+        {
+            _invincibilityElapsedTime += Time.deltaTime;
+            if(_invincibilityElapsedTime > _invincibilityDuration)
+            {
+                _invincibilityElapsedTime = 0.0f;
+                _invincibilityEnabled = false;
+            }
+        }
     }
 
     public void TriggerResetGame()
@@ -63,5 +121,14 @@ public class GameManager : MonoBehaviour
         _fade.alpha = 1.0f;
         //reload the current scene
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
+
+    private void SpeedBoost()
+    {
+        _speedBoostEnabled = true;
+    }
+    private void Invincibility()
+    {
+        _invincibilityEnabled = true;
     }
 }

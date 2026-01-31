@@ -11,6 +11,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement settings")]
     [SerializeField]
     private float _movementSpeed = 5.0f;
+    [SerializeField]
+    private float _movementSpeedWhenBoosted = 7.0f;
+
+    private float _currentMovementSpeed;
 
     //Variables to be rememebered
     private Vector2 _movementInput;
@@ -36,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _gameManager = GameManager.Instance;
         }
+        _currentMovementSpeed = _movementSpeed;
     }
 
     // Update is called once per frame
@@ -47,6 +52,14 @@ public class PlayerMovement : MonoBehaviour
         }
         if (_gameManager.GameIsActive)
         {
+            if (_gameManager._speedBoostEnabled)
+            {
+                _currentMovementSpeed = _movementSpeedWhenBoosted;
+            }
+            else
+            {
+                _currentMovementSpeed = _movementSpeed;
+            }
             MovePlayer();
             MovementAnimation();
         }
@@ -69,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
             _playerVisualization.GetComponent<SpriteRenderer>().flipX = false;
         }
             Vector3 movement = new Vector3(_movementInput.x, _movementInput.y, 0);
-        transform.Translate(movement * _movementSpeed * Time.deltaTime, Space.World);
+        transform.Translate(movement * _currentMovementSpeed * Time.deltaTime, Space.World);
     }
 
     private void MovementAnimation()

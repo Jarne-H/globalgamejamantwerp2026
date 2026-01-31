@@ -86,7 +86,7 @@ public class Health : MonoBehaviour
                     _invincibilityCurrentDuration = _invincibilityDurationAtStart;
                 }
             }
-            else if (_invincibilityShield != null && _invincibilityShield.activeSelf)
+            else if (_invincibilityShield != null && _invincibilityShield.activeSelf && !_gameManager._invincibilityEnabled)
             {
                 _invincibilityShield.SetActive(false);
             }
@@ -130,13 +130,16 @@ public class Health : MonoBehaviour
                 }
             }
 
+
+
         }
     }
 
     public void AdjustHealth(int amount)
     {
-        if (amount < 0 && _isInvincible)
+        if (amount < 0 && (_isInvincible || _gameManager._invincibilityEnabled))
         {
+            _invincibilityShield.SetActive(true);
             return;
         }
         _currentHealth += amount;
@@ -243,22 +246,26 @@ public class Health : MonoBehaviour
         EnemyMovementAngry angryEnemy = GetComponent<EnemyMovementAngry>();
         if (happyEnemy != null)
         {
-            ++_gameManager.HappySadValue;
+            ++_gameManager._happyValue;
+            Debug.Log(_gameManager._happyValue);
         }
         if (sadEnemy != null)
         {
-            --_gameManager.HappySadValue;
+            ++_gameManager._sadValue;
+            Debug.Log(_gameManager._sadValue);
+
         }
         if (calmEnemy != null)
         {
-            ++_gameManager.CalmAngryValue;
+            ++_gameManager._calmValue;
+            Debug.Log(_gameManager._calmValue);
+
         }
         if (angryEnemy != null)
         {
-            --_gameManager.CalmAngryValue;
-        }
+            ++_gameManager._angryValue;
+            Debug.Log(_gameManager._angryValue);
 
-        Debug.Log(_gameManager.HappySadValue);
-        Debug.Log(_gameManager.CalmAngryValue);
+        }
     }
 }

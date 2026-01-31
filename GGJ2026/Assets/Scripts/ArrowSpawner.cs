@@ -27,7 +27,17 @@ public class ArrowSpawner : MonoBehaviour
     [SerializeField]
     private Vector3 _originalVisualisationScale = new Vector3(1, 1, 1);
     [SerializeField]
+    private GameManager _gameManager;
+    [SerializeField]
     private Animator _bowAnimation;
+
+    [Header("PowerUpStuff")]
+    [SerializeField]
+    private int _improvedPierceValue;
+    [SerializeField]
+    private float _multishotSpreadAngle;
+
+
 
     private int _chargePulseCount = 0;
 
@@ -156,6 +166,12 @@ public class ArrowSpawner : MonoBehaviour
             _bowAnimation.SetBool("IsCharged", false);
             //Instantiate arrow prefab
             GameObject arrow = Instantiate(_arrowPrefab, transform.position, transform.rotation);
+            if (_gameManager._nextArrowsPiercing > 0)
+            {
+                --_gameManager._nextArrowsPiercing;
+                Arrow arrowScript = arrow.GetComponent<Arrow>();
+                arrowScript.pierceLevel = 3;
+            }
             //rotate arrow to face mouse position
             Vector3 mousePosition = Mouse.current.position.ReadValue();
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
@@ -163,6 +179,13 @@ public class ArrowSpawner : MonoBehaviour
             //reset shoot input
             _shootInput = 0;
             _chargingIsReady = false;
+            if(_gameManager._nextArrowsMultiShot > 0)
+            {
+                --_gameManager._nextArrowsMultiShot;
+                GameObject arrowLeft = Instantiate(_arrowPrefab, transform.position, Quaternion.Euler(0, 0, arrow.transform.rotation.z + _multishotSpreadAngle));
+                GameObject arrowRight = Instantiate(_arrowPrefab, transform.position, Quaternion.Euler(0, 0, arrow.transform.rotation.z - _multishotSpreadAngle));
+            }
+
         }
         else
         {
