@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -23,15 +24,17 @@ public class ArrowSpawner : MonoBehaviour
     [Header("GameJuice")]
     [SerializeField]
     private GameObject _visualisation;
-    //[SerializeField]
-    //private Vector3 _originalVisualisationScale = new Vector3(1, 1, 1);
+    [SerializeField]
+    private Vector3 _originalVisualisationScale = new Vector3(1, 1, 1);
     [SerializeField]
     private Animator _bowAnimation;
+
+    private int _chargePulseCount = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //_originalVisualisationScale = _visualisation.transform.localScale;
+        _originalVisualisationScale = _visualisation.transform.localScale;
         if (_playerInput == null)
         {
             _playerInput = FindAnyObjectByType<PlayerInput>();
@@ -55,7 +58,9 @@ public class ArrowSpawner : MonoBehaviour
         }
         Aim();
         if (_shootInput > 0)
+        {
             Charge();
+        }
         else
         {
             if (_chargingIsReady)
@@ -96,9 +101,27 @@ public class ArrowSpawner : MonoBehaviour
 
     private void ChargeAnimation()
     {
-        if (!_chargingIsReady)
+        //every 1/3 of charging time, do a pulse
+        switch (_currentChargingTime)
+        {
+            case float n when (n >= (_chargingTime / 3) * (_chargePulseCount + 1)) && (_chargePulseCount < 3):
+                StartCoroutine(BowPulse());
+                _chargePulseCount++;
+                break;
+            case float n when (n < (_chargingTime / 3)):
+                _chargePulseCount = 0;
+                break;
+        }
+        if (_shootInput > 0)
         {
             _bowAnimation.SetBool("IsCharging", true);
+        }
+        else
+        {
+            _bowAnimation.SetBool("IsCharging", false);
+        }
+            if (!_chargingIsReady)
+        {
             _bowAnimation.SetBool("IsCharged", false);
             //scale over y axis based on charging time
             //float scaleY = Mathf.Lerp(1, 1.5f, _currentChargingTime / _chargingTime);
@@ -106,9 +129,21 @@ public class ArrowSpawner : MonoBehaviour
         }
         else
         {
-            _bowAnimation.SetBool("IsCharging", false);
             _bowAnimation.SetBool("IsCharged", true);
             //_visualisation.transform.localScale = _originalVisualisationScale;
+        }
+    }
+
+    private IEnumerator BowPulse()
+    {
+        //increase visualisation scale quickly to 1.1f over 0.1 seconds
+        Vector3 targetScale = _originalVisualisationScale * 1.1f;
+        float elapsedTime = 0f;
+        while (elapsedTime < 0.1f)
+        {
+            _visualisation.transform.localScale = Vector3.Lerp(_originalVisualisationScale, targetScale, (elapsedTime / 0.1f));
+            elapsedTime += Time.deltaTime;
+            yield return null;
         }
     }
 

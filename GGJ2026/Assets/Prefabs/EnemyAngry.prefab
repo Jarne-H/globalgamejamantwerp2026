@@ -107,7 +107,7 @@ PrefabInstance:
     - target: {fileID: 5780306360994272928, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 30d0dd703cd30d84381abad5fff9886a, type: 2}
+      objectReference: {fileID: 9100000, guid: 19638306796eefc4fbde21e117982060, type: 2}
     - target: {fileID: 5977844083428121869, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
       propertyPath: m_Name
       value: EnemyAngry
