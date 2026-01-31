@@ -417,8 +417,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c066dc51dea074fa076b3ce1ef6f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
-  enemyPrefabs: []
-  timeBetweenSpawns: 5
+  _enemyPrefabs:
+  - {fileID: 6058415117864206501, guid: 7c64239e34e63504ba76a664073b9158, type: 3}
+  - {fileID: 6058415117864206501, guid: 7c64239e34e63504ba76a664073b9158, type: 3}
+  _timeBetweenSpawns: 5
+  _playerTransform: {fileID: 4588022173219018014}
 --- !u!1 &918671954
 GameObject:
   m_ObjectHideFlags: 0
