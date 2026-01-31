@@ -16,7 +16,17 @@ public class EnemyMovementSad : EnemyMovement
 
     private bool _facingLeft = true;
 
-
+    private void Start()
+    {
+        if (PlayerTransform.position.x < transform.position.x)
+        {
+            _facingLeft = false;
+        }
+        else
+        {
+            _facingLeft = true;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
