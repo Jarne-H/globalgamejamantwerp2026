@@ -10,15 +10,4 @@ public class EnemyMovement : MonoBehaviour
         get {  return _playerTransform; }
         set { _playerTransform = value; }
     }
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
