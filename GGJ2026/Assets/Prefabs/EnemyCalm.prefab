@@ -24,6 +24,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyCalm
       objectReference: {fileID: 0}
+    - target: {fileID: 5977844083428121869, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8881870938222719431, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.67105
