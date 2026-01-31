@@ -5,28 +5,42 @@ public class EnemyMovementHappy : EnemyMovement
     [SerializeField]
     private float _playerForce = 5.0f;
     [SerializeField]
-    private float _ = 5.0f;
+    private float _perpendicularForce = 5.0f;
+    [SerializeField]
+    private float _maxVelocity = 7.0f;
 
-    private bool _facingLeft = true;
+    private Vector3 _velocityVector;
 
-
-
-    private float _elapsedTime = 0f;
+    private bool _facingLeft = false;
 
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 movementDirection = Vector3.zero;
-        if (movementDirection.x < 0 && !_facingLeft)
+        if (_velocityVector.x < 0 && !_facingLeft)
         {
             GetComponentInChildren<SpriteRenderer>().flipX = true;
             _facingLeft = true;
         }
-        else if (movementDirection.x > 0 && _facingLeft)
+        else if (_velocityVector.x > 0 && _facingLeft)
         {
             GetComponentInChildren<SpriteRenderer>().flipX = false;
             _facingLeft = false;
         }
+    }
+
+    private void FixedUpdate()
+    {
+        Vector3 playerDir = (PlayerTransform.position - transform.position).normalized;
+        Vector3 perpendicualDir = new Vector3(playerDir.y, playerDir.x, playerDir.z);
+        _velocityVector += playerDir * _playerForce * Time.deltaTime;
+        _velocityVector += perpendicualDir * _perpendicularForce * Time.deltaTime;
+
+        if(_velocityVector.magnitude > _maxVelocity)
+        {
+            _velocityVector *= _maxVelocity / _velocityVector.magnitude;
+        }
+
+        transform.position += _velocityVector * Time.deltaTime;
     }
 }
