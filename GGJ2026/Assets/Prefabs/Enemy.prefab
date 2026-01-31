@@ -57,7 +57,7 @@ MonoBehaviour:
   _invincibilityShield: {fileID: 0}
   _isPlayer: 0
   _deathSceneName: GAMEOVER
-  _isEnemy: 0
+  _isEnemy: 1
   _gameManager: {fileID: 0}
 --- !u!61 &3474148695173427431
 BoxCollider2D:
