@@ -37,7 +37,9 @@ public class EnemyMovementAngry : EnemyMovement
 
     private bool _isCharging = false;
 
-
+    [Header("Animation")]
+    [SerializeField]
+    private Animator _animator;
 
     // Update is called once per frame
     void Update()
@@ -70,6 +72,7 @@ public class EnemyMovementAngry : EnemyMovement
                 if(_timeSinceChargeEnd > _chargeDecelerationTime)
                 {
                     _isCharging = false;
+                    _animator.SetBool("IsCharging", false);
                     _timeSinceLastCharge = 0f;
                     _timeSinceChargeEnd = 0f;
                     //_chargeIdleTime = 0;
@@ -100,6 +103,7 @@ public class EnemyMovementAngry : EnemyMovement
                 _chargeTarget = PlayerTransform.position + playerDirection * _chargeAdditionalDistance;
                 _chargeOriginalPosition = transform.position;
                 _isCharging = true;
+                _animator.SetBool("IsCharging", true);
                 _timeSinceChargeStart = 0f;
             }
         }
