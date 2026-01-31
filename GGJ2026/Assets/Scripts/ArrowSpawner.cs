@@ -35,8 +35,9 @@ public class ArrowSpawner : MonoBehaviour
             _playerInput = FindAnyObjectByType<PlayerInput>();
         }
         _shoot = _playerInput.actions["Attack"];
+        //while shoot is being pressed, read value
         _shoot.performed += ctx => _shootInput = ctx.ReadValue<float>();
-
+        _shoot.canceled += ctx => _shootInput = ctx.ReadValue<float>();
     }
 
     // Update is called once per frame
