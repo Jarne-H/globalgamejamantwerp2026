@@ -182,8 +182,10 @@ public class ArrowSpawner : MonoBehaviour
             if(_gameManager._nextArrowsMultiShot > 0)
             {
                 --_gameManager._nextArrowsMultiShot;
-                GameObject arrowLeft = Instantiate(_arrowPrefab, transform.position, Quaternion.Euler(0, 0, arrow.transform.rotation.z + _multishotSpreadAngle));
-                GameObject arrowRight = Instantiate(_arrowPrefab, transform.position, Quaternion.Euler(0, 0, arrow.transform.rotation.z - _multishotSpreadAngle));
+                GameObject arrowLeft = Instantiate(_arrowPrefab, transform.position, transform.rotation);
+                arrowLeft.transform.rotation = GetComponentInChildren();
+                GameObject arrowRight = Instantiate(_arrowPrefab, transform.position, transform.rotation);
+                arrowRight.transform.rotation = Quaternion.Euler(0, 0, arrow.transform.rotation.z - _multishotSpreadAngle);
             }
 
         }

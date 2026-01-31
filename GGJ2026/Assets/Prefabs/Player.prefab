@@ -250,6 +250,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &3410036508780190692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1235846881708239941}
+  m_Layer: 6
+  m_Name: ArrowLookAtLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1235846881708239941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3410036508780190692}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1299711868324088951}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3528725082828036381
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,6 +402,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8461020598653358132}
+  - {fileID: 1235846881708239941}
+  - {fileID: 8021703576601564429}
   m_Father: {fileID: 8881870938222719431}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1066733674689688640
@@ -390,7 +423,10 @@ MonoBehaviour:
   _arrowPrefab: {fileID: 5933484707961651746, guid: 26814b5ea693f854b93d003515da8d1e, type: 3}
   _visualisation: {fileID: 2773614523699784542}
   _originalVisualisationScale: {x: 1, y: 1, z: 1}
+  _gameManager: {fileID: 0}
   _bowAnimation: {fileID: 1019589075677218120}
+  _improvedPierceValue: 0
+  _multishotSpreadAngle: 0
 --- !u!1 &5977844083428121869
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   _playerInput: {fileID: 0}
   _movementSpeed: 3.5
+  _movementSpeedWhenBoosted: 7
   _gameManager: {fileID: 0}
   _playerVisualization: {fileID: 6111493662939614991}
   _walkBobbingAmount: 0.05
@@ -563,6 +600,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!1 &6090493987543581324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8021703576601564429}
+  m_Layer: 6
+  m_Name: ArrowLookAtRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8021703576601564429
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090493987543581324}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1299711868324088951}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6111493662939614991
 GameObject:
   m_ObjectHideFlags: 0

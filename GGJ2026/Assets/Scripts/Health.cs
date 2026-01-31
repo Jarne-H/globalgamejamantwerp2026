@@ -137,7 +137,7 @@ public class Health : MonoBehaviour
 
     public void AdjustHealth(int amount)
     {
-        if (amount < 0 && (_isInvincible || _gameManager._invincibilityEnabled))
+        if (amount < 0 && (_isInvincible || (_gameManager != null && _gameManager._invincibilityEnabled)))
         {
             _invincibilityShield.SetActive(true);
             return;
@@ -145,6 +145,11 @@ public class Health : MonoBehaviour
         _currentHealth += amount;
         _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
 
+        if (!_isPlayer)
+        {
+            HandleEmotionMeter();
+            IncrementScore(1);
+        }
         if (_currentHealth <= 0)
         {
             OnDie?.Invoke();
@@ -170,8 +175,6 @@ public class Health : MonoBehaviour
 
     private void HandleEnemyDeath()
     {
-        IncrementScore(1);
-        HandleEmotionMeter();
         if (_currentLives > 0)
         {
             _currentHealth = _maxHealth;
@@ -226,7 +229,7 @@ public class Health : MonoBehaviour
     {
         if (_gameManager.GameIsActive)
         {
-            Debug.Log("Collision detected with " + collision.gameObject.name);
+            //Debug.Log("Collision detected with " + collision.gameObject.name);
             if (_isPlayer && collision.gameObject.CompareTag("Enemy"))
             {
                 AdjustHealth(-1);
@@ -247,23 +250,27 @@ public class Health : MonoBehaviour
         if (happyEnemy != null)
         {
             ++_gameManager._happyValue;
+            --_gameManager._sadValue;
             Debug.Log(_gameManager._happyValue);
         }
         if (sadEnemy != null)
         {
             ++_gameManager._sadValue;
+            --_gameManager._happyValue;
             Debug.Log(_gameManager._sadValue);
 
         }
         if (calmEnemy != null)
         {
             ++_gameManager._calmValue;
+            --_gameManager._angryValue;
             Debug.Log(_gameManager._calmValue);
 
         }
         if (angryEnemy != null)
         {
             ++_gameManager._angryValue;
+            --_gameManager._calmValue;
             Debug.Log(_gameManager._angryValue);
 
         }
