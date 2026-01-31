@@ -148,7 +148,6 @@ GameObject:
   - component: {fileID: 8881870938222719431}
   - component: {fileID: 1956459236112733203}
   - component: {fileID: 546226310174514508}
-  - component: {fileID: 7797237461965703114}
   - component: {fileID: 2215962158695930966}
   - component: {fileID: 4535359823340702258}
   m_Layer: 0
@@ -204,24 +203,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d266daf65975e340b3a7913b5ecde8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  maxHealth: 1
-  isInvincible: 1
-  invincibilityDuration: 3
-  healthRegenRate: 0
---- !u!114 &7797237461965703114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5977844083428121869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1b5559f498450f4b957bc77d5074fe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerDeath
-  _playerHealth: {fileID: 546226310174514508}
+  _maxHealth: 1
+  _maxLives: 1
+  _isInvincible: 0
+  _invincibilityDurationAtStart: 3
+  _invincibilityTimeAfterDeath: 2.8
+  _healthRegenRate: 0
+  _isPlayer: 0
   _deathSceneName: GAMEOVER
+  _isEnemy: 0
 --- !u!114 &2215962158695930966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,6 +298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1509552327023998934}
   - component: {fileID: 4124832932095705325}
+  - component: {fileID: 8488471270069429414}
   m_Layer: 0
   m_Name: Visualisation
   m_TagString: Untagged
@@ -378,7 +369,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 150
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.7590777, g: 1, b: 0.6999999, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -388,3 +379,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8488471270069429414
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6111493662939614991}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 405073179e50a7343a49edaecaab272f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
