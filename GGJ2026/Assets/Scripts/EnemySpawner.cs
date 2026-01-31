@@ -7,10 +7,18 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private List<GameObject> _enemyPrefabs;
 
+    [Header("SpawnTime")]
     [SerializeField]
-    private int _timeBetweenSpawns = 5;
+    private float _timeBetweenSpawns = 5f;
     private float _timeSinceLastSpawn = 0f;
 
+    [SerializeField]
+    private float _spawnTimeMultiplier = 0.9f;
+    [SerializeField]
+    private float _spawnTimeMultiplyCooldown = 10f;
+    private float _spawnTimeMultiplyElapsedTime = 0f;
+
+    [Header("SpawnDistance")]
     [SerializeField]
     private Transform _playerTransform;
     [SerializeField]
@@ -25,10 +33,16 @@ public class EnemySpawner : MonoBehaviour
     void Update()
     {
         _timeSinceLastSpawn += Time.deltaTime;
-        if(_timeSinceLastSpawn > _timeBetweenSpawns)
+        _spawnTimeMultiplyElapsedTime += Time.deltaTime;
+        if (_timeSinceLastSpawn > _timeBetweenSpawns)
         { 
             _timeSinceLastSpawn -= _timeBetweenSpawns;
             SpawnEnemy();
+        }
+        if(_spawnTimeMultiplyElapsedTime > _spawnTimeMultiplyCooldown)
+        {
+            _spawnTimeMultiplyElapsedTime -= _spawnTimeMultiplyCooldown;
+            _timeBetweenSpawns *= _spawnTimeMultiplier;
         }
     }
 
