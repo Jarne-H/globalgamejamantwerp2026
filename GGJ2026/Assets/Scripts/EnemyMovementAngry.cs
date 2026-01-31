@@ -30,7 +30,7 @@ public class EnemyMovementAngry : EnemyMovement
     private float _timeSinceChargeEnd = 0f;
 
 
-    private bool _facingLeft = true;
+    private bool _facingLeft;
 
     private Vector3 _chargeTarget;
     private Vector3 _chargeOriginalPosition;

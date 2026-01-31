@@ -11,7 +11,7 @@ public class EnemyMovementHappy : EnemyMovement
 
     private Vector3 _velocityVector;
 
-    private bool _facingLeft = false;
+    private bool _facingLeft;
     private void Start()
     {
         if (PlayerTransform.position.x < transform.position.x)
@@ -23,8 +23,8 @@ public class EnemyMovementHappy : EnemyMovement
             _facingLeft = true;
         }
     }
-// Update is called once per frame
-void Update()
+
+    void Update()
     {
         if (_velocityVector.x < 0 && !_facingLeft)
         {
