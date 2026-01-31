@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 405073179e50a7343a49edaecaab272f, type: 2}
     - target: {fileID: 5977844083428121869, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
       propertyPath: m_Name
-      value: EnemySad
+      value: EnemyHappy
       objectReference: {fileID: 0}
     - target: {fileID: 8881870938222719431, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
       propertyPath: m_LocalPosition.x
@@ -90,14 +90,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5977844083428121869, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
       insertIndex: 3
-      addedObject: {fileID: -1645968102207887676}
+      addedObject: {fileID: 4540528630685637068}
   m_SourcePrefab: {fileID: 100100000, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
 --- !u!1 &6058415117864206501 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5977844083428121869, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
   m_PrefabInstance: {fileID: 497157337736306088}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-1645968102207887676
+--- !u!114 &4540528630685637068
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,10 +106,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6058415117864206501}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f899b93856cb6540b89e4f4e476340b, type: 3}
+  m_Script: {fileID: 11500000, guid: 0eb28b28ad8a4af4a89291157084e7ab, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementSad
-  _movementSpeed: 2
-  _waveOffset: 2
-  _waveFrequency: 4
-  _distanceMaxWaveOffset: 4
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementHappy
+  _playerForce: 3
+  _perpendicularForce: 1
+  _maxVelocity: 4

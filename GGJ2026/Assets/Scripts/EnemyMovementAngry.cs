@@ -17,6 +17,9 @@ public class EnemyMovementAngry : EnemyMovement
     private float _chargeAdditionalDistance = 5.0f;
     [SerializeField]
     private float _chargeRadius = 8.0f;
+    [SerializeField]
+    private float _chargePreparationTime = 2.0f;
+    private float _chargePreparationElapsedTime = 0f;
 
     [Header("ChargeSmoothing")]
     [SerializeField]
@@ -25,9 +28,7 @@ public class EnemyMovementAngry : EnemyMovement
     [SerializeField]
     private float _chargeDecelerationTime = 1.0f;
     private float _timeSinceChargeEnd = 0f;
-    //[SerializeField]
-    //private float _chargeEndIdleTime = 0.2f;
-    //private float _chargeIdleTime = 0f;
+
 
     private bool _facingLeft = true;
 
@@ -42,13 +43,16 @@ public class EnemyMovementAngry : EnemyMovement
     // Update is called once per frame
     void Update()
     {
-        //_chargeIdleTime += Time.deltaTime;
-        //if (_chargeIdleTime < _chargeEndIdleTime)
-        //{
-        //    return;
-        //}
         if (_isCharging)
         {
+            if(_chargePreparationElapsedTime < _chargePreparationTime)
+            {
+                // change animation to charge preparation
+                _chargePreparationElapsedTime += Time.deltaTime;
+                return;
+            }
+            // change animation to charging
+
             _timeSinceChargeStart += Time.deltaTime;
             float chargeSpeed = _chargeSpeed;
             if(_timeSinceChargeStart < _chargeAccelerationTime)
@@ -72,7 +76,6 @@ public class EnemyMovementAngry : EnemyMovement
                     _isCharging = false;
                     _timeSinceLastCharge = 0f;
                     _timeSinceChargeEnd = 0f;
-                    //_chargeIdleTime = 0;
                 }
             }
         }
@@ -101,6 +104,7 @@ public class EnemyMovementAngry : EnemyMovement
                 _chargeOriginalPosition = transform.position;
                 _isCharging = true;
                 _timeSinceChargeStart = 0f;
+                _chargePreparationElapsedTime = 0f;
             }
         }
 
