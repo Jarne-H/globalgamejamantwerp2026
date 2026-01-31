@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3474148695173427431}
   - component: {fileID: 1460427103480155464}
   - component: {fileID: -2720901104664207004}
+  - component: {fileID: -7642800782580549781}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5977844083428121869}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00512, y: -0.00734, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -58,6 +59,11 @@ MonoBehaviour:
   _isPlayer: 0
   _deathSceneName: GAMEOVER
   _isEnemy: 1
+  _enemyPrefabs:
+  - {fileID: 154899368385121475, guid: 38a1536246ba2cf46b51c2e9897e9d54, type: 3}
+  - {fileID: 8567414228540288317, guid: 6cac5f5ded489354a8ba4a8dabcf47c4, type: 3}
+  - {fileID: 1748639186060500132, guid: d154654016b864042a34a06d0716a938, type: 3}
+  - {fileID: 7082634850838212035, guid: a469d14456cd15c469026d1d58b56589, type: 3}
   _gameManager: {fileID: 0}
 --- !u!61 &3474148695173427431
 BoxCollider2D:
@@ -144,6 +150,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-7642800782580549781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5977844083428121869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be16da3c6a5870a4ebac577beaa1a7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyType
+  enemyType: 0
 --- !u!1 &8792185689904089372
 GameObject:
   m_ObjectHideFlags: 0
