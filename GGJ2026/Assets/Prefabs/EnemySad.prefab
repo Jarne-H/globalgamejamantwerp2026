@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: enemyType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 546226310174514508, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
+      propertyPath: _maxLives
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1007287534641887013, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
       propertyPath: m_LocalScale.x
       value: 1

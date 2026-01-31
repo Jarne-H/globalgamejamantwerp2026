@@ -23,13 +23,15 @@ public class ArrowSpawner : MonoBehaviour
     [Header("GameJuice")]
     [SerializeField]
     private GameObject _visualisation;
+    //[SerializeField]
+    //private Vector3 _originalVisualisationScale = new Vector3(1, 1, 1);
     [SerializeField]
-    private Vector3 _originalVisualisationScale = new Vector3(1, 1, 1);
+    private Animator _bowAnimation;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _originalVisualisationScale = _visualisation.transform.localScale;
+        //_originalVisualisationScale = _visualisation.transform.localScale;
         if (_playerInput == null)
         {
             _playerInput = FindAnyObjectByType<PlayerInput>();
@@ -96,13 +98,17 @@ public class ArrowSpawner : MonoBehaviour
     {
         if (!_chargingIsReady)
         {
+            _bowAnimation.SetBool("IsCharging", true);
+            _bowAnimation.SetBool("IsCharged", false);
             //scale over y axis based on charging time
-            float scaleY = Mathf.Lerp(1, 1.5f, _currentChargingTime / _chargingTime);
-            _visualisation.transform.localScale = new Vector3(_originalVisualisationScale.x, scaleY, _originalVisualisationScale.z);
+            //float scaleY = Mathf.Lerp(1, 1.5f, _currentChargingTime / _chargingTime);
+            //_visualisation.transform.localScale = new Vector3(_originalVisualisationScale.x, scaleY, _originalVisualisationScale.z);
         }
         else
         {
-            _visualisation.transform.localScale = _originalVisualisationScale;
+            _bowAnimation.SetBool("IsCharging", false);
+            _bowAnimation.SetBool("IsCharged", true);
+            //_visualisation.transform.localScale = _originalVisualisationScale;
         }
     }
 
@@ -111,6 +117,8 @@ public class ArrowSpawner : MonoBehaviour
         if (_chargingIsReady)
         {
             Debug.Log("Shoot arrow");
+            _bowAnimation.SetBool("IsCharging", false);
+            _bowAnimation.SetBool("IsCharged", false);
             //Instantiate arrow prefab
             GameObject arrow = Instantiate(_arrowPrefab, transform.position, transform.rotation);
             //rotate arrow to face mouse position

@@ -9,9 +9,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 104378947666231524, guid: 7c64239e34e63504ba76a664073b9158, type: 3}
+      propertyPath: _maxLives
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 104378947666231524, guid: 7c64239e34e63504ba76a664073b9158, type: 3}
+      propertyPath: _enemyPrefabs.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 104378947666231524, guid: 7c64239e34e63504ba76a664073b9158, type: 3}
       propertyPath: '_enemyPrefabs.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8567414228540288317, guid: 6cac5f5ded489354a8ba4a8dabcf47c4, type: 3}
+    - target: {fileID: 104378947666231524, guid: 7c64239e34e63504ba76a664073b9158, type: 3}
+      propertyPath: '_enemyPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1748639186060500132, guid: d154654016b864042a34a06d0716a938, type: 3}
+    - target: {fileID: 104378947666231524, guid: 7c64239e34e63504ba76a664073b9158, type: 3}
+      propertyPath: '_enemyPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 7082634850838212035, guid: a469d14456cd15c469026d1d58b56589, type: 3}
     - target: {fileID: 1635912471307255727, guid: 7c64239e34e63504ba76a664073b9158, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -23,7 +39,7 @@ PrefabInstance:
     - target: {fileID: 6255930841495423752, guid: 7c64239e34e63504ba76a664073b9158, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 19638306796eefc4fbde21e117982060, type: 2}
+      objectReference: {fileID: 9100000, guid: 30d0dd703cd30d84381abad5fff9886a, type: 2}
     - target: {fileID: 9053642048575450223, guid: 7c64239e34e63504ba76a664073b9158, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

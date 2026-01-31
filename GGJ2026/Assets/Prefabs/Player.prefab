@@ -147,6 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8461020598653358132}
   - component: {fileID: 4258089223365062193}
+  - component: {fileID: 1019589075677218120}
   m_Layer: 6
   m_Name: Visualisation
   m_TagString: Untagged
@@ -164,8 +165,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 3.5, z: 2.5}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1299711868324088951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -227,6 +228,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1019589075677218120
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2773614523699784542}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 842946fb62dac2541968cee20ad4288c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3528725082828036381
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +389,8 @@ MonoBehaviour:
   _chargingTime: 2.3
   _arrowPrefab: {fileID: 5933484707961651746, guid: 26814b5ea693f854b93d003515da8d1e, type: 3}
   _visualisation: {fileID: 2773614523699784542}
-  _visualisationScale: {x: 1, y: 1, z: 1}
+  _originalVisualisationScale: {x: 1, y: 1, z: 1}
+  _bowAnimation: {fileID: 1019589075677218120}
 --- !u!1 &5977844083428121869
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8881870938222719431}
+  - component: {fileID: 9177166283541880195}
   - component: {fileID: 1956459236112733203}
   - component: {fileID: 546226310174514508}
   - component: {fileID: 4535359823340702258}
@@ -406,6 +431,23 @@ Transform:
   - {fileID: 1299711868324088951}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9177166283541880195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5977844083428121869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10edc4ef3fc2be9438410a25432abde4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerColor
+  _visualiser: {fileID: 4124832932095705325}
+  _playerColor: {r: 1, g: 1, b: 1, a: 1}
+  _rainbowEffect: 1
+  _rainbowSpeed: 0.25
+  _randomColorOnStart: 0
 --- !u!114 &1956459236112733203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,6 +488,7 @@ MonoBehaviour:
   _isPlayer: 1
   _deathSceneName: GAMEOVER
   _isEnemy: 0
+  _enemyPrefabs: []
   _gameManager: {fileID: 0}
 --- !u!61 &4535359823340702258
 BoxCollider2D:
@@ -578,7 +621,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3163b4dbb43086345a3968dc09178e82, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
