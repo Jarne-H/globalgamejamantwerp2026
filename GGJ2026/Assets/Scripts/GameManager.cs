@@ -18,6 +18,15 @@ public class GameManager : MonoBehaviour
     private float _fadeDuration = 0.2f;
     public float FadeDuration => _fadeDuration;
 
+    private int _happySadValue = 0;
+    public int HappySadValue { get { return _happySadValue; } set { _happySadValue = value; } }
+
+    private int _calmAngryValue = 0;
+    public int CalmAngryValue { get { return _calmAngryValue; } set { _calmAngryValue = value; } }
+
+    private int _score = 0;
+    public int Score {  get { return _score; } set { _score = value; } }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

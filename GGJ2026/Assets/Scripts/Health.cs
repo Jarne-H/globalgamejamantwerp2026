@@ -40,8 +40,6 @@ public class Health : MonoBehaviour
     [SerializeField]
     private bool _isEnemy = false;
 
-    [Header("Enemy death settings")]
-
     [Header("GameJuice")]
     [SerializeField]
     private GameManager _gameManager;
@@ -98,37 +96,36 @@ public class Health : MonoBehaviour
                     _healthRegenTimer = 0.0f;
                 }
             }
-            if (_isPlayer)
-            {
-                if (_currentHealth <= 0)
-                {
-                    _currentLives--;
-                    if (_currentLives > 0)
-                    {
-                        _currentHealth = _maxHealth;
 
-                        if (_isPlayer)
-                        {
-                            HandlePlayerRespawn();
-                        }
-                        else if (_isEnemy)
-                        {
-                            HandleEnemyRespawn();
-                        }
-                    }
-                    else
+            if (_currentHealth <= 0)
+            {
+                _currentLives--;
+                if (_currentLives > 0)
+                {
+                    _currentHealth = _maxHealth;
+
+                    if (_isPlayer)
                     {
-                        if (_isPlayer)
-                        {
-                            HandlePlayerDeath();
-                        }
-                        else if (_isEnemy)
-                        {
-                            HandleEnemyDeath();
-                        }
+                        HandlePlayerRespawn();
+                    }
+                    else if (_isEnemy)
+                    {
+                        HandleEnemyRespawn();
+                    }
+                }
+                else
+                {
+                    if (_isPlayer)
+                    {
+                        HandlePlayerDeath();
+                    }
+                    else if (_isEnemy)
+                    {
+                        HandleEnemyDeath();
                     }
                 }
             }
+
         }
     }
 
@@ -166,6 +163,8 @@ public class Health : MonoBehaviour
 
     private void HandleEnemyDeath()
     {
+        IncrementScore(1);
+        HandleEmotionMeter();
         if (_currentLives > 0)
         {
             _currentHealth = _maxHealth;
@@ -173,6 +172,7 @@ public class Health : MonoBehaviour
         }
         else
         {
+            Debug.Log("EnemyDied");
             Destroy(gameObject);
         }
     }
@@ -210,5 +210,36 @@ public class Health : MonoBehaviour
                 AdjustHealth(-1);
             }
         }
+    }
+
+    private void IncrementScore(int increment)
+    {
+        _gameManager.Score += increment;
+    }
+    private void HandleEmotionMeter()
+    {
+        EnemyMovementSad sadEnemy = GetComponent<EnemyMovementSad>();
+        EnemyMovementHappy happyEnemy = GetComponent<EnemyMovementHappy>();
+        EnemyMovementCalm calmEnemy = GetComponent<EnemyMovementCalm>();
+        EnemyMovementAngry angryEnemy = GetComponent<EnemyMovementAngry>();
+        if (happyEnemy != null)
+        {
+            ++_gameManager.HappySadValue;
+        }
+        if (sadEnemy != null)
+        {
+            --_gameManager.HappySadValue;
+        }
+        if (calmEnemy != null)
+        {
+            ++_gameManager.CalmAngryValue;
+        }
+        if (angryEnemy != null)
+        {
+            --_gameManager.CalmAngryValue;
+        }
+
+        Debug.Log(_gameManager.HappySadValue);
+        Debug.Log(_gameManager.CalmAngryValue);
     }
 }
