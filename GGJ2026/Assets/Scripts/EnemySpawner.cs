@@ -48,6 +48,6 @@ public class EnemySpawner : MonoBehaviour
         if (invertedY) { y = -1; }
         else { y = 1; }
 
-            enemyMovement.transform = _playerTransform + new Vector3(x);
+            //enemyMovement.transform = _playerTransform + new Vector3(x * _enemySpawnDistanceMinX);
     }
 }
