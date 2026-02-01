@@ -144,7 +144,8 @@ public class Health : MonoBehaviour
     {
         if (amount < 0 && _isInvincible)
         {
-            _invincibilityShield.SetActive(true);
+            if(_invincibilityShield != null)
+                _invincibilityShield.SetActive(true);
             return;
         }
         _currentHealth += amount;
