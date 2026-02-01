@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: _maxLives
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 546226310174514508, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
+      propertyPath: _enemyPrefabs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 546226310174514508, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
+      propertyPath: '_enemyPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 7082634850838212035, guid: a469d14456cd15c469026d1d58b56589, type: 3}
     - target: {fileID: 1007287534641887013, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.15
