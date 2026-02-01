@@ -3,13 +3,12 @@ using UnityEngine;
 public class SillyEnemy : MonoBehaviour
 {
     [SerializeField]
-    private float _moveSpeed = -Random.Range(1.5f, 2);
+    private float _moveSpeed;
     [SerializeField]
     private bool _flipX = false;
 
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
-
     void Update()
     {
         transform.Translate(Vector3.left * _moveSpeed * Time.deltaTime);
