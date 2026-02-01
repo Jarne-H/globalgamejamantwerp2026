@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f899b93856cb6540b89e4f4e476340b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementSad
-  _movementSpeed: 2
-  _waveOffset: 2
+  _movementSpeed: 2.2
+  _waveOffset: 3
   _waveFrequency: 4
   _distanceMaxWaveOffset: 4
