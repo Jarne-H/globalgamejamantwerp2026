@@ -394,7 +394,7 @@ MonoBehaviour:
   _playerColor: {r: 1, g: 1, b: 1, a: 1}
   _rainbowEffect: 0
   _rainbowSpeed: 0.75
-  _randomColorOnStart: 1
+  _randomColorOnStart: 0
   _playerTrail: {fileID: 0}
 --- !u!114 &1956459236112733203
 MonoBehaviour:
