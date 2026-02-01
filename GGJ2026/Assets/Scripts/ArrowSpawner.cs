@@ -65,6 +65,10 @@ public class ArrowSpawner : MonoBehaviour
             _chargingIsReady = true;
         }
         Aim();
+        if (!_gameManager.GameIsActive)
+        {
+            return;
+        }
         if (_shootInput > 0)
         {
             Charge();
@@ -119,6 +123,10 @@ public class ArrowSpawner : MonoBehaviour
             case float n when (n < (_chargingTime / 3)):
                 _chargePulseCount = 0;
                 break;
+        }
+        if (!_gameManager.GameIsActive)
+        {
+            return;
         }
         if (_shootInput > 0)
         {
