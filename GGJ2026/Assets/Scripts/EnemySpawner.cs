@@ -30,11 +30,14 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private float _enemySpawnDistanceMinY;
 
-    [SerializeField]
     private GameManager _gameManager;
 
     void Update()
     {
+        if (_gameManager == null)
+        {
+            _gameManager = FindAnyObjectByType<GameManager>();
+        }
         if (!_gameManager.GameIsActive)
         {
             return;
