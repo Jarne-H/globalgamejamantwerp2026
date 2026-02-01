@@ -39,9 +39,17 @@ public class ArrowSpawner : MonoBehaviour
 
     private int _chargePulseCount = 0;
 
+    private AudioManager _audioManager;
+    private bool _startedCharging = false;
+    private bool _chargingReadyOnce = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if (_audioManager == null)
+        {
+            _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        }
         _originalVisualisationScale = _visualisation.transform.localScale;
         if (_playerInput == null)
         {
@@ -59,9 +67,15 @@ public class ArrowSpawner : MonoBehaviour
         if (!_chargingIsReady && _currentChargingTime < _chargingTime)
         {
             _currentChargingTime += Time.deltaTime;
+            _chargingReadyOnce = false;
         }
         else
         {
+            if (!_chargingReadyOnce)
+            {
+                _chargingReadyOnce = true;
+                _audioManager.PlaySFX(_audioManager.bowReady);
+            }
             _chargingIsReady = true;
         }
         Aim();
@@ -71,10 +85,16 @@ public class ArrowSpawner : MonoBehaviour
         }
         if (_shootInput > 0)
         {
+            if (!_startedCharging)
+            {
+                _startedCharging = true;
+                _audioManager.PlaySFX(_audioManager.bowCharge);
+            }
             Charge();
         }
         else
         {
+            _startedCharging = false;
             if (_chargingIsReady)
             {
                 Shoot();
@@ -186,6 +206,8 @@ public class ArrowSpawner : MonoBehaviour
     {
         if (_chargingIsReady)
         {
+            _audioManager.StopSFX();
+            _audioManager.PlaySFX(_audioManager.bowShoot);
             //visualise shooting using coroutine
             StartCoroutine(BowPulse());
             StartCoroutine(CameraShake());
