@@ -41,34 +41,6 @@ PrefabInstance:
       value: EnemyCalm-Maskless
       objectReference: {fileID: 0}
     - target: {fileID: 9053642048575450223, guid: 08a9e6361c7a1714998e65974dd99a95, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9053642048575450223, guid: 08a9e6361c7a1714998e65974dd99a95, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9053642048575450223, guid: 08a9e6361c7a1714998e65974dd99a95, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9053642048575450223, guid: 08a9e6361c7a1714998e65974dd99a95, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9053642048575450223, guid: 08a9e6361c7a1714998e65974dd99a95, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9053642048575450223, guid: 08a9e6361c7a1714998e65974dd99a95, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9053642048575450223, guid: 08a9e6361c7a1714998e65974dd99a95, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9053642048575450223, guid: 08a9e6361c7a1714998e65974dd99a95, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
