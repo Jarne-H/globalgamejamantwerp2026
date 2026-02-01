@@ -151,7 +151,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -957,7 +957,7 @@ GameObject:
   - component: {fileID: 1210195635}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Audio
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -986,7 +986,6 @@ MonoBehaviour:
   enemyMaskBreak: {fileID: 0}
   playerDamaged: {fileID: 0}
   playerDeath: {fileID: 0}
-  bgMusicVolume: 0.4
 --- !u!4 &1210195636
 Transform:
   m_ObjectHideFlags: 0
