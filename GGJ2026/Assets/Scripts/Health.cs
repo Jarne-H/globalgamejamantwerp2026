@@ -55,9 +55,15 @@ public class Health : MonoBehaviour
     [SerializeField]
     private GameObject _enemyBurnPrefab;
 
+    private AudioManager _audioManager;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if(_audioManager == null)
+        {
+            _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        }
         _currentHealth = _maxHealth;
         _currentLives = _maxLives;
         _invincibilityCurrentDuration = _invincibilityDurationAtStart;
@@ -122,10 +128,13 @@ public class Health : MonoBehaviour
                     if (_isPlayer)
                     {
                         HandlePlayerRespawn();
+                        _audioManager.PlaySFX(_audioManager.playerDamaged);
+
                     }
                     else if (_isEnemy)
                     {
                         HandleEnemyRespawn();
+                        _audioManager.PlaySFX(_audioManager.enemyMaskBreak);
                     }
                 }
                 else
@@ -133,10 +142,14 @@ public class Health : MonoBehaviour
                     if (_isPlayer)
                     {
                         HandlePlayerDeath();
+                        _audioManager.PlaySFX(_audioManager.playerDeath);
+
                     }
                     else if (_isEnemy)
                     {
                         HandleEnemyDeath();
+                        _audioManager.PlaySFX(_audioManager.enemyDeath);
+
                     }
                 }
             }
