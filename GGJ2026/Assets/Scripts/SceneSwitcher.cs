@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SceneSwitcher : MonoBehaviour
 {
-    private string _initialSceneName = "MainMenu";
+    private string _initialSceneName = "MENU";
 
     [SerializeField]
     private string _goTo = "GAME";
