@@ -15,6 +15,8 @@ public class Arrow : MonoBehaviour
 
     public Vector3 direction = Vector3.up; // Direction of the arrow
 
+    public float angleIncrement = 0f;
+
     private void Start()
     {
         Vector3 mousePosition = Mouse.current.position.ReadValue();
@@ -22,7 +24,7 @@ public class Arrow : MonoBehaviour
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
         Vector3 direction = mousePosition - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90 + angleIncrement));
         direction = transform.rotation.eulerAngles;
     }
 

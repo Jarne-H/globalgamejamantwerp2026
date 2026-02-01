@@ -37,11 +37,6 @@ public class ArrowSpawner : MonoBehaviour
     [SerializeField]
     private float _multishotSpreadAngle;
 
-    [SerializeField]
-    private Transform _arrowLookAtLeftTransform;
-    [SerializeField]
-    private Transform _arrowLookAtRightTransform;
-
     private int _chargePulseCount = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -186,10 +181,10 @@ public class ArrowSpawner : MonoBehaviour
             {
                 --_gameManager._nextArrowsMultiShot;
                 GameObject arrowLeft = Instantiate(_arrowPrefab, transform.position, Quaternion.Euler(30,30,30));
-                arrowLeft.transform.LookAt(_arrowLookAtLeftTransform.position);
-                //arrowLeft.GetComponent<Arrow>().direction = transform.LookAt(_arrowLookAtLeftTransform.position);
+                arrowLeft.GetComponent<Arrow>().angleIncrement = _multishotSpreadAngle;
                 GameObject arrowRight = Instantiate(_arrowPrefab, transform.position, Quaternion.Euler(30, 30, 30));
-                arrowRight.transform.LookAt(_arrowLookAtRightTransform.position);
+                arrowRight.GetComponent<Arrow>().angleIncrement = -_multishotSpreadAngle;
+
             }
 
         }
