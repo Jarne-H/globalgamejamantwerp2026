@@ -1255,7 +1255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1066733674689688640, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
       propertyPath: _multishotSpreadAngle
-      value: 45
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1120628111751070857, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
       propertyPath: m_FlipY
