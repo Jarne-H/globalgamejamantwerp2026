@@ -48,6 +48,10 @@ public class Health : MonoBehaviour
     [SerializeField]
     private GameManager _gameManager;
 
+    [SerializeField]
+    private Animator _playerAnimation;
+    [SerializeField]
+    private GameObject _maskPopPrefab;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -199,6 +203,15 @@ public class Health : MonoBehaviour
         {
             _isInvincible = true;
             _invincibilityCurrentDuration = _invincibilityTimeAfterDamage;
+
+            _playerAnimation.SetInteger("Health", _currentLives);
+
+            //spawn mask pop
+            if (_maskPopPrefab != null)
+            {
+                GameObject maskPop = Instantiate(_maskPopPrefab, transform.position, Quaternion.identity);
+                maskPop.GetComponent<MaskPop>().SpriteToUse = _currentLives;
+            }
         }
         // Implement player respawn logic here (e.g., reset position, play animation, etc.)
         Debug.Log("Player respawned. Lives left: " + _currentLives);

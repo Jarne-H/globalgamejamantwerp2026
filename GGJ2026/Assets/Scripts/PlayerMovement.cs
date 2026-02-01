@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float _bobbingAmplitude = 10.0f;
 
+    private TrailRenderer _trailRenderer;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -42,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
             _gameManager = GameManager.Instance;
         }
         _currentMovementSpeed = _movementSpeed;
+        _trailRenderer = GetComponent<TrailRenderer>();
     }
 
     // Update is called once per frame
@@ -55,10 +58,12 @@ public class PlayerMovement : MonoBehaviour
         {
             if (_gameManager._speedBoostEnabled)
             {
+                _trailRenderer.enabled = true;
                 _currentMovementSpeed = _movementSpeedWhenBoosted;
             }
             else
             {
+                _trailRenderer.enabled = false;
                 _currentMovementSpeed = _movementSpeed;
             }
             MovePlayer();

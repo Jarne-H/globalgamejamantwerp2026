@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private PlayerColor _playerColor;
+    [SerializeField]
+    private GameObject _pauseMenu;
 
     [SerializeField]
     private List<GameObject> _happyMeterSprites = new List<GameObject>();
@@ -81,6 +83,14 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (_pauseMenu.active)
+        {
+            GameIsActive = false;
+        }
+        else
+        {
+            GameIsActive = true;
+        }
         if (_happyValue >= _requiredValueForBoost)
         {
             _sadValue = 0; _calmValue = 0; _angryValue = 0;
