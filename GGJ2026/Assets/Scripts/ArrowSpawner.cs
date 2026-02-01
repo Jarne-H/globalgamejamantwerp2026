@@ -163,10 +163,33 @@ public class ArrowSpawner : MonoBehaviour
         }
     }
 
+    private IEnumerator CameraShake()
+    {
+        //camera shake by zoom in and out quickly
+        Camera mainCamera = Camera.main;
+        //add 0.1 to orthographic size
+        float originalSize = mainCamera.orthographicSize;
+        float targetSize = originalSize + 0.1f;
+        float elapsedTime = 0f;
+        while (elapsedTime < 0.1f)
+        {
+            //slerp with bounce effect
+            mainCamera.orthographicSize = Mathf.SmoothStep(originalSize, targetSize, elapsedTime / 0.1f);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        //reset size
+        mainCamera.orthographicSize = originalSize;
+    }
+
     private void Shoot()
     {
         if (_chargingIsReady)
         {
+            //visualise shooting using coroutine
+            StartCoroutine(BowPulse());
+            StartCoroutine(CameraShake());
+            
             Debug.Log("Shoot arrow");
             _bowAnimation.SetBool("IsCharging", false);
             _bowAnimation.SetBool("IsCharged", false);
