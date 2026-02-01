@@ -200,19 +200,8 @@ public class Health : MonoBehaviour
 
     private void HandleEnemyRespawn()
     {
-        EnemyTypes enemyType = gameObject.GetComponent<EnemyType>().enemyType;
-        //get random enemyType that is not the same as the current enemyType
-        //get total number of enemy types
-        int totalEnemyTypes = System.Enum.GetNames(typeof(EnemyTypes)).Length;
-        //get random number between 0 and totalEnemyTypes - 1
-        int randomEnemyTypeIndex;
-
-        randomEnemyTypeIndex = Random.Range(0, totalEnemyTypes);
-        //if randomEnemyTypeIndex is the same as the current enemyType, do +1 and wrap around
-        if (randomEnemyTypeIndex == (int)enemyType)
-        {
-            randomEnemyTypeIndex = (randomEnemyTypeIndex + 1) % totalEnemyTypes;
-        }
+        //get random enemy type index
+        int randomEnemyTypeIndex = Random.Range(0, _enemyPrefabs.Count);
         //spawn new enemy of randomEnemyTypeIndex
         GameObject newEnemyPrefab = _enemyPrefabs[randomEnemyTypeIndex];
         GameObject newEnemy = Instantiate(newEnemyPrefab, transform.position, Quaternion.identity);
