@@ -106,5 +106,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementHappy
   _playerForce: 3
-  _perpendicularForce: 1
+  _perpendicularForce: 2.5
   _maxVelocity: 4

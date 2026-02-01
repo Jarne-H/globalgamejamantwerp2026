@@ -212,7 +212,7 @@ public class ArrowSpawner : MonoBehaviour
         if (_chargingIsReady)
         {
             _audioManager.StopSFX();
-            _audioManager.PlaySFX(_audioManager.bowShoot, 0.01f);
+            _audioManager.PlaySFX(_audioManager.bowShoot, 0.5f);
             //visualise shooting using coroutine
             StartCoroutine(BowPulse());
             StartCoroutine(CameraShake());

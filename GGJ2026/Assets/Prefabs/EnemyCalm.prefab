@@ -93,11 +93,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaabef28505e5c744be7eadca7b571cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementCalm
-  _movementSpeed: 3
+  _movementSpeed: 3.8
   _playerAngleClampSize_div_2: 45
   _angleTargetChangeSpeed: 90
-  _angleChangeSpeed: 0.5
-  _angleChangeCooldown: 1.5
+  _angleChangeSpeed: 0.35
+  _angleChangeCooldown: 1.3
 --- !u!1 &8998860265411957940 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8792185689904089372, guid: 8e3e1ff9004e61e4c9cd9dd056056968, type: 3}

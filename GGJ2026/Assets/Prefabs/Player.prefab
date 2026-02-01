@@ -606,8 +606,8 @@ MonoBehaviour:
   _gameManager: {fileID: 0}
   _bowAnimation: {fileID: 1019589075677218120}
   _bowChargingPulseCount: 2
-  _improvedPierceValue: 0
-  _multishotSpreadAngle: 0
+  _improvedPierceValue: 3
+  _multishotSpreadAngle: 30
 --- !u!1 &5045608688093643157
 GameObject:
   m_ObjectHideFlags: 0

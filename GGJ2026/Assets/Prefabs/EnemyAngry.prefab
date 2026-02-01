@@ -172,13 +172,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c4572914291ce41a4c6a6e96e3fad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementAngry
-  _movementSpeed: 2
+  _movementSpeed: 2.5
   _chargeSpeed: 7
-  _chargeCooldown: 2
-  _chargeAdditionalDistance: 5
-  _chargeRadius: 5
+  _chargeCooldown: 1.7
+  _chargeAdditionalDistance: 3
+  _chargeRadius: 4.2
   _chargePreparationTime: 1
-  _chargeAccelerationTime: 1
+  _chargeAccelerationTime: 0.8
   _chargeDecelerationTime: 0.5
   _animator: {fileID: 6255930841495423752}
 --- !u!96 &4430446476049806542
