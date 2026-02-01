@@ -243,9 +243,11 @@ public class GameManager : MonoBehaviour
         }
         _fade.alpha = 1.0f;
         //reload the CUTSCENE scene
-        //wait 0.5 seconds, then go to CUTSCENE scene
+        //set parent of main camera to null
+        Camera.main.transform.parent = null;
         //delete player from scene
         _playerColor.gameObject.SetActive(false);
+        //wait 0.5 seconds, then go to CUTSCENE scene
         Invoke("MoveToCutScene", 0.5f);
     }
 
