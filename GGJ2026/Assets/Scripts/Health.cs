@@ -73,7 +73,7 @@ public class Health : MonoBehaviour
 
         if (_gameManager.GameIsActive)
         {
-            if (_gameManager._invincibilityEnabled)
+            if (_gameManager._invincibilityEnabled && _isPlayer)
             {
                 _gameManager._invincibilityEnabled = false;
                 SetInvincibility(_gameManager.InvincibilityDuration);
@@ -244,28 +244,40 @@ public class Health : MonoBehaviour
         if (happyEnemy != null)
         {
             ++_gameManager._happyValue;
-            --_gameManager._sadValue;
+            if(_gameManager._sadValue < _gameManager._requiredValueForBoost)
+            {
+                --_gameManager._sadValue;
+            }
             Debug.Log(_gameManager._happyValue);
             _gameManager._sadValue = Mathf.Clamp(_gameManager._sadValue, 0, 999);
         }
         if (sadEnemy != null)
         {
             ++_gameManager._sadValue;
-            --_gameManager._happyValue;
+            if (_gameManager._happyValue < _gameManager._requiredValueForBoost)
+            {
+                --_gameManager._happyValue;
+            }
             Debug.Log(_gameManager._sadValue);
             _gameManager._happyValue = Mathf.Clamp(_gameManager._happyValue, 0, 999);
         }
         if (calmEnemy != null)
         {
             ++_gameManager._calmValue;
-            --_gameManager._angryValue;
+            if (_gameManager._angryValue < _gameManager._requiredValueForBoost)
+            {
+                --_gameManager._angryValue;
+            }
             Debug.Log(_gameManager._calmValue);
             _gameManager._angryValue = Mathf.Clamp(_gameManager._angryValue, 0, 999);
         }
         if (angryEnemy != null)
         {
             ++_gameManager._angryValue;
-            --_gameManager._calmValue;
+            if (_gameManager._calmValue < _gameManager._requiredValueForBoost)
+            {
+                --_gameManager._calmValue;
+            }
             _gameManager._calmValue = Mathf.Clamp(_gameManager._calmValue, 0, 999);
             Debug.Log(_gameManager._angryValue);
         }
