@@ -12,6 +12,8 @@ public class EnemyMovementHappy : EnemyMovement
     private Vector3 _velocityVector;
 
     private bool _facingLeft;
+
+    private GameManager _gameManager;
     private void Start()
     {
         if (PlayerTransform.position.x < transform.position.x)
@@ -26,6 +28,14 @@ public class EnemyMovementHappy : EnemyMovement
 
     void Update()
     {
+        if (_gameManager == null)
+        {
+            _gameManager = FindAnyObjectByType<GameManager>();
+        }
+        if (!_gameManager.GameIsActive)
+        {
+            return;
+        }
         if (_velocityVector.x < 0 && !_facingLeft)
         {
             GetComponentInChildren<SpriteRenderer>().flipX = true;
@@ -42,6 +52,14 @@ public class EnemyMovementHappy : EnemyMovement
 
     private void FixedUpdate()
     {
+        if (_gameManager == null)
+        {
+            _gameManager = FindAnyObjectByType<GameManager>();
+        }
+        if (!_gameManager.GameIsActive)
+        {
+            return;
+        }
         Vector3 playerDir = (PlayerTransform.position - transform.position).normalized;
         Vector3 perpendicualDir = new Vector3(playerDir.y, playerDir.x, playerDir.z);
         _velocityVector += playerDir * _playerForce * Time.deltaTime;
