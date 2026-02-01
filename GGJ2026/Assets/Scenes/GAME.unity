@@ -977,15 +977,15 @@ MonoBehaviour:
   musicSource: {fileID: 12373032}
   SFXSource: {fileID: 75318788}
   background: {fileID: 8300000, guid: 9c703f62fec6bee46b6ddf58db5b3f37, type: 3}
-  bowCharge: {fileID: 0}
-  bowReady: {fileID: 0}
-  bowShoot: {fileID: 0}
-  enemyDeath: {fileID: 0}
-  enemyMadAttack: {fileID: 0}
-  enemyMadCharge: {fileID: 0}
-  enemyMaskBreak: {fileID: 0}
-  playerDamaged: {fileID: 0}
-  playerDeath: {fileID: 0}
+  bowCharge: {fileID: 8300000, guid: 1962b553ab4b8144f9ee1429e7ba5a25, type: 3}
+  bowReady: {fileID: 8300000, guid: 9520da344a5bea044965924c891715a3, type: 3}
+  bowShoot: {fileID: 8300000, guid: 07060dcb319dffd4f95c0723d75983fc, type: 3}
+  enemyDeath: {fileID: 8300000, guid: 207c48acd86c92f488e524d4b8e223e3, type: 3}
+  enemyMadAttack: {fileID: 8300000, guid: 415df64f3e9de694d9322302fbc8e026, type: 3}
+  enemyMadCharge: {fileID: 8300000, guid: d43c22b66064eb64288885db36c8a6f8, type: 3}
+  enemyMaskBreak: {fileID: 8300000, guid: 97b970326823e634b9359c92a29101ad, type: 3}
+  playerDamaged: {fileID: 8300000, guid: 217323e55dcce5742a819fbc199f14c9, type: 3}
+  playerDeath: {fileID: 8300000, guid: 6cd76f3174b3aad478937c82fe89afd7, type: 3}
   bgMusicVolume: 0.4
 --- !u!4 &1210195636
 Transform:
@@ -1681,6 +1681,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8881870938222719431, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9177166283541880195, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
+      propertyPath: _randomColorOnStart
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
