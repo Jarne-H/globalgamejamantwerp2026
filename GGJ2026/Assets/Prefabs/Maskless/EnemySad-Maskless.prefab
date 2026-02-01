@@ -13,6 +13,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 104378947666231524, guid: e4d4f6c9272785542b31d159e26f9100, type: 3}
+      propertyPath: _enemyBurnPrefab
+      value: 
+      objectReference: {fileID: 3370862291018861993, guid: 7dc72cd525bb22345a4b38099ebd799a, type: 3}
+    - target: {fileID: 104378947666231524, guid: e4d4f6c9272785542b31d159e26f9100, type: 3}
       propertyPath: _enemyPrefabs.Array.size
       value: 0
       objectReference: {fileID: 0}

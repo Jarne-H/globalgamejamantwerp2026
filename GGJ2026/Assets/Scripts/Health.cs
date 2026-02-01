@@ -52,6 +52,8 @@ public class Health : MonoBehaviour
     private Animator _playerAnimation;
     [SerializeField]
     private GameObject _maskPopPrefab;
+    [SerializeField]
+    private GameObject _enemyBurnPrefab;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -193,6 +195,11 @@ public class Health : MonoBehaviour
         else
         {
             Debug.Log("EnemyDied");
+            //spawn burn effect
+            if (_enemyBurnPrefab != null)
+            {
+                Instantiate(_enemyBurnPrefab, transform.position, Quaternion.identity);
+            }
             Destroy(gameObject);
         }
     }
