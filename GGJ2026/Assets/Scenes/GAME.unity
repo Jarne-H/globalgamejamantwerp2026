@@ -1257,14 +1257,6 @@ PrefabInstance:
       propertyPath: _multishotSpreadAngle
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 1066733674689688640, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
-      propertyPath: _arrowLookAtLeftTransform
-      value: 
-      objectReference: {fileID: 1520377478}
-    - target: {fileID: 1066733674689688640, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
-      propertyPath: _arrowLookAtRightTransform
-      value: 
-      objectReference: {fileID: 297788687}
     - target: {fileID: 1120628111751070857, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
       propertyPath: m_FlipY
       value: 0
