@@ -43,6 +43,8 @@ public class EnemyMovementAngry : EnemyMovement
     [SerializeField]
     private Animator _animator;
 
+    private GameManager _gameManager;
+
     private void Start()
     {
         if(PlayerTransform.position.x < transform.position.x)
@@ -58,6 +60,14 @@ public class EnemyMovementAngry : EnemyMovement
     // Update is called once per frame
     void Update()
     {
+        if (_gameManager == null)
+        {
+            _gameManager = FindAnyObjectByType<GameManager>();
+        }
+        if (!_gameManager.GameIsActive)
+        {
+            return;
+        }
         if (_isCharging)
         {
             if(_chargePreparationElapsedTime < _chargePreparationTime)

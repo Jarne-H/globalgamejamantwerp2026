@@ -30,8 +30,18 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private float _enemySpawnDistanceMinY;
 
+    private GameManager _gameManager;
+
     void Update()
     {
+        if (_gameManager == null)
+        {
+            _gameManager = FindAnyObjectByType<GameManager>();
+        }
+        if (!_gameManager.GameIsActive)
+        {
+            return;
+        }
         _timeSinceLastSpawn += Time.deltaTime;
         _spawnTimeMultiplyElapsedTime += Time.deltaTime;
         if (_timeSinceLastSpawn > _timeBetweenSpawns)
