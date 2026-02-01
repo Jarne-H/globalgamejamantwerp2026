@@ -73,6 +73,11 @@ public class Health : MonoBehaviour
 
         if (_gameManager.GameIsActive)
         {
+            if (_gameManager._invincibilityEnabled)
+            {
+                _gameManager._invincibilityEnabled = false;
+                SetInvincibility(_gameManager.InvincibilityDuration);
+            }
             if (_isInvincible)
             {
                 if (_invincibilityShield != null)
@@ -86,7 +91,7 @@ public class Health : MonoBehaviour
                     _invincibilityCurrentDuration = _invincibilityDurationAtStart;
                 }
             }
-            else if (_invincibilityShield != null && _invincibilityShield.activeSelf && !_gameManager._invincibilityEnabled)
+            else if (_invincibilityShield != null && _invincibilityShield.activeSelf)
             {
                 _invincibilityShield.SetActive(false);
             }
@@ -137,7 +142,7 @@ public class Health : MonoBehaviour
 
     public void AdjustHealth(int amount)
     {
-        if (amount < 0 && (_isInvincible || (_gameManager != null && _gameManager._invincibilityEnabled)))
+        if (amount < 0 && _isInvincible)
         {
             _invincibilityShield.SetActive(true);
             return;
@@ -156,7 +161,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    public void SetInvinsibility(int Time)
+    public void SetInvincibility(int Time)
     {
         _isInvincible = true;
         _invincibilityCurrentDuration = Time;

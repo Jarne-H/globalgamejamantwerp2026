@@ -26,8 +26,9 @@ public class GameManager : MonoBehaviour
     private float _speedBoostDuration = 5.0f;
     private float _speedBoostElapsedTime = 0f;
     [SerializeField]
-    private float _invincibilityDuration = 5.0f;
-    private float _invincibilityElapsedTime = 0f;
+    private int _invincibilityDuration = 5;
+
+    public int InvincibilityDuration { get { return _invincibilityDuration; } }
 
     [SerializeField]
     private List<GameObject> _happyMeterSprites = new List<GameObject>();
@@ -98,15 +99,6 @@ public class GameManager : MonoBehaviour
             {
                 _speedBoostElapsedTime = 0.0f;
                 _speedBoostEnabled = false;
-            }
-        }
-        if (_invincibilityEnabled)
-        {
-            _invincibilityElapsedTime += Time.deltaTime;
-            if(_invincibilityElapsedTime > _invincibilityDuration)
-            {
-                _invincibilityElapsedTime = 0.0f;
-                _invincibilityEnabled = false;
             }
         }
 

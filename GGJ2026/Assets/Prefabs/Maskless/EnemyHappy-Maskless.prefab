@@ -40,38 +40,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyHappy-Maskless
       objectReference: {fileID: 0}
+    - target: {fileID: 6058415117864206501, guid: b6361723cdb5f6e4581529e67598a0b2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6255930841495423752, guid: b6361723cdb5f6e4581529e67598a0b2, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: af2ce646c32157e48ba155baa440d809, type: 2}
-    - target: {fileID: 9053642048575450223, guid: b6361723cdb5f6e4581529e67598a0b2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9053642048575450223, guid: b6361723cdb5f6e4581529e67598a0b2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9053642048575450223, guid: b6361723cdb5f6e4581529e67598a0b2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9053642048575450223, guid: b6361723cdb5f6e4581529e67598a0b2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9053642048575450223, guid: b6361723cdb5f6e4581529e67598a0b2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9053642048575450223, guid: b6361723cdb5f6e4581529e67598a0b2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9053642048575450223, guid: b6361723cdb5f6e4581529e67598a0b2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9053642048575450223, guid: b6361723cdb5f6e4581529e67598a0b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
