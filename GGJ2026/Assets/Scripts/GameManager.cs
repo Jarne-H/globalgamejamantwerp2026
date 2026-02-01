@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,6 +31,9 @@ public class GameManager : MonoBehaviour
     bool _invincibilityFinished = true;
 
     public int InvincibilityDuration { get { return _invincibilityDuration; } }
+
+    [SerializeField]
+    private PlayerColor _playerColor;
 
     [SerializeField]
     private List<GameObject> _happyMeterSprites = new List<GameObject>();
@@ -77,7 +81,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(_happyValue >= _requiredValueForBoost)
+        if (_happyValue >= _requiredValueForBoost)
         {
             _sadValue = 0; _calmValue = 0; _angryValue = 0;
             if (!_nextArrowsPiercingActiveOnce)
@@ -91,7 +95,7 @@ public class GameManager : MonoBehaviour
                 _nextArrowsPiercingActiveOnce = false;
             }
         }
-        if(_sadValue >= _requiredValueForBoost)
+        if (_sadValue >= _requiredValueForBoost)
         {
             _happyValue = 0; _calmValue = 0; _angryValue = 0;
             if (!_nextArrowsMultiShotActiveOnce)
@@ -138,7 +142,7 @@ public class GameManager : MonoBehaviour
         if (_speedBoostEnabled)
         {
             _speedBoostElapsedTime += Time.deltaTime;
-            if(_speedBoostElapsedTime > _speedBoostDuration)
+            if (_speedBoostElapsedTime > _speedBoostDuration)
             {
                 _speedBoostElapsedTime = 0.0f;
                 _speedBoostEnabled = false;
@@ -149,14 +153,33 @@ public class GameManager : MonoBehaviour
             _invincibilityElapsedTime = 0.0f;
         }
         _invincibilityElapsedTime += Time.deltaTime;
-        if(_invincibilityElapsedTime > _invincibilityDuration)
+        if (_invincibilityElapsedTime > _invincibilityDuration)
         {
             _invincibilityFinished = true;
         }
-        
 
+        VisualiseMeters();
+        SetPlayerColor();
+    }
+
+    private void SetPlayerColor()
+    {
+        //if any meter is full, enable rainbow effect
+        if (_happyValue >= _requiredValueForBoost || _sadValue >= _requiredValueForBoost || _calmValue >= _requiredValueForBoost || _angryValue >= _requiredValueForBoost)
+        {
+            _playerColor.EnableRainbow();
+        }
+        //if no meter is full, disable rainbow effect
+        else
+        {
+            _playerColor.DisableRainbow();
+        }
+    }
+
+    private void VisualiseMeters()
+    {
         //visualise meter values and their sprites
-        for(int i = 0; i < _happyMeterSprites.Count; i++)
+        for (int i = 0; i < _happyMeterSprites.Count; i++)
         {
             _happyMeterSprites[i].SetActive(i < _happyValue);
         }
@@ -172,7 +195,6 @@ public class GameManager : MonoBehaviour
         {
             _angryMeterSprites[i].SetActive(i < _angryValue);
         }
-
     }
 
     public void TriggerResetGame()
