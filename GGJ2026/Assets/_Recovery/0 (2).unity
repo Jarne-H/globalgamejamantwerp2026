@@ -151,7 +151,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -957,7 +957,7 @@ GameObject:
   - component: {fileID: 1210195635}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Audio
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -986,7 +986,6 @@ MonoBehaviour:
   enemyMaskBreak: {fileID: 0}
   playerDamaged: {fileID: 0}
   playerDeath: {fileID: 0}
-  bgMusicVolume: 0.4
 --- !u!4 &1210195636
 Transform:
   m_ObjectHideFlags: 0
@@ -1572,7 +1571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1066733674689688640, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
       propertyPath: _multishotSpreadAngle
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1120628111751070857, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
       propertyPath: m_FlipY
@@ -1686,10 +1685,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4204967682083020591, guid: d8e6398f2d761764bb83fd0f232c20e5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4488331374533855612, guid: d8e6398f2d761764bb83fd0f232c20e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1709,10 +1704,6 @@ PrefabInstance:
     - target: {fileID: 5728333440834459599, guid: d8e6398f2d761764bb83fd0f232c20e5, type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6710716530930778538, guid: d8e6398f2d761764bb83fd0f232c20e5, type: 3}
-      propertyPath: m_Color.a
-      value: 0.5019608
       objectReference: {fileID: 0}
     - target: {fileID: 7293401603791770761, guid: d8e6398f2d761764bb83fd0f232c20e5, type: 3}
       propertyPath: m_DefaultActionMap
@@ -1744,7 +1735,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7382299341082070664, guid: d8e6398f2d761764bb83fd0f232c20e5, type: 3}
-    - {fileID: 136672188796048698, guid: d8e6398f2d761764bb83fd0f232c20e5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
