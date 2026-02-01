@@ -20,13 +20,14 @@ public class GameManager : MonoBehaviour
     private float _fadeDuration = 0.2f;
     public float FadeDuration => _fadeDuration;
 
-    [SerializeField]
-    private int _requiredValueForBoost = 6;
+    public int _requiredValueForBoost = 5;
     [SerializeField]
     private float _speedBoostDuration = 5.0f;
     private float _speedBoostElapsedTime = 0f;
     [SerializeField]
     private int _invincibilityDuration = 5;
+    private float _invincibilityElapsedTime = 0f;
+    bool _invincibilityFinished = true;
 
     public int InvincibilityDuration { get { return _invincibilityDuration; } }
 
@@ -53,6 +54,11 @@ public class GameManager : MonoBehaviour
     public int _nextArrowsMultiShot = 0;
     public int _nextArrowsPiercing = 0;
 
+    private bool _speedBoostActiveOnce = false;
+    private bool _invincibilityActiveOnce = false;
+    private bool _nextArrowsMultiShotActiveOnce = false;
+    private bool _nextArrowsPiercingActiveOnce = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -73,23 +79,60 @@ public class GameManager : MonoBehaviour
     {
         if(_happyValue >= _requiredValueForBoost)
         {
-            _happyValue = 0; _sadValue = 0; _calmValue = 0; _angryValue = 0;
-            _nextArrowsPiercing = 1;
+            _sadValue = 0; _calmValue = 0; _angryValue = 0;
+            if (!_nextArrowsPiercingActiveOnce)
+            {
+                _nextArrowsPiercing = 1;
+            }
+            _nextArrowsPiercingActiveOnce = true;
+            if (_nextArrowsPiercing <= 0)
+            {
+                _happyValue = 0; _sadValue = 0; _calmValue = 0; _angryValue = 0;
+                _nextArrowsPiercingActiveOnce = false;
+            }
         }
         if(_sadValue >= _requiredValueForBoost)
         {
-            _happyValue = 0; _sadValue = 0; _calmValue = 0; _angryValue = 0;
-            _nextArrowsMultiShot = 1;
+            _happyValue = 0; _calmValue = 0; _angryValue = 0;
+            if (!_nextArrowsMultiShotActiveOnce)
+            {
+                _nextArrowsMultiShot = 1;
+            }
+            _nextArrowsMultiShotActiveOnce = true;
+            if (_nextArrowsMultiShot <= 0)
+            {
+                _happyValue = 0; _sadValue = 0; _calmValue = 0; _angryValue = 0;
+                _nextArrowsMultiShotActiveOnce = false;
+            }
         }
         if (_calmValue >= _requiredValueForBoost)
         {
-            _happyValue = 0; _sadValue = 0; _calmValue = 0; _angryValue = 0;
-            _invincibilityEnabled = true;
+            _happyValue = 0; _sadValue = 0; _angryValue = 0;
+            if (!_invincibilityActiveOnce)
+            {
+                _invincibilityEnabled = true;
+                _invincibilityFinished = false;
+            }
+            _invincibilityActiveOnce = true;
+            if (_invincibilityFinished)
+            {
+                _happyValue = 0; _sadValue = 0; _calmValue = 0; _angryValue = 0;
+                _invincibilityActiveOnce = false;
+            }
         }
         if (_angryValue >= _requiredValueForBoost)
         {
-            _happyValue = 0; _sadValue = 0; _calmValue = 0; _angryValue = 0;
-            _speedBoostEnabled = true;
+            _happyValue = 0; _sadValue = 0; _calmValue = 0;
+            if (!_speedBoostActiveOnce)
+            {
+                _speedBoostEnabled = true;
+            }
+            _speedBoostActiveOnce = true;
+            if (!_speedBoostEnabled)
+            {
+                _happyValue = 0; _sadValue = 0; _calmValue = 0; _angryValue = 0;
+                _speedBoostActiveOnce = false;
+            }
         }
 
         if (_speedBoostEnabled)
@@ -101,6 +144,16 @@ public class GameManager : MonoBehaviour
                 _speedBoostEnabled = false;
             }
         }
+        if (_invincibilityEnabled)
+        {
+            _invincibilityElapsedTime = 0.0f;
+        }
+        _invincibilityElapsedTime += Time.deltaTime;
+        if(_invincibilityElapsedTime > _invincibilityDuration)
+        {
+            _invincibilityFinished = true;
+        }
+        
 
         //visualise meter values and their sprites
         for(int i = 0; i < _happyMeterSprites.Count; i++)
