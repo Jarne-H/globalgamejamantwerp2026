@@ -3096,7 +3096,6 @@ GameObject:
   - component: {fileID: 7221480288802285878}
   - component: {fileID: 8187361049697846383}
   - component: {fileID: 6710716530930778538}
-  - component: {fileID: 136672188796048698}
   - component: {fileID: 3921707331792878075}
   - component: {fileID: 1558798751343698711}
   m_Layer: 5
@@ -3165,21 +3164,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 2
---- !u!114 &136672188796048698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9059363745046044181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d16d1213b38ca70409820d1d1326cd82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIToggle
-  _uiElement: {fileID: 9059363745046044181}
-  _playerInput: {fileID: 7293401603791770761}
-  _connectedAction: Cancel
 --- !u!225 &3921707331792878075
 CanvasGroup:
   m_ObjectHideFlags: 0

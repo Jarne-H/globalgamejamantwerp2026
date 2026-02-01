@@ -7,12 +7,6 @@ public class SceneSwitcher : MonoBehaviour
     [SerializeField]
     private string _goTo = "GAME";
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(_initialSceneName);
-    }
-
     public void GoToScene()
     {
         SwitchScene(_goTo);
