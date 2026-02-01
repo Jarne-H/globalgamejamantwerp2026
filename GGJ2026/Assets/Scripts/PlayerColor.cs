@@ -14,6 +14,7 @@ public class PlayerColor : MonoBehaviour
     private bool _randomColorOnStart = false;
 
     [SerializeField]
+    private Material _playerTrail;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 

@@ -2057,8 +2057,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2300661835515891735}
-        m_TargetAssemblyTypeName: UIToggle, Assembly-CSharp
-        m_MethodName: 
+        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
+        m_MethodName: GoToScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3117,8 +3117,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8914584839940626433}
   - {fileID: 831056783940733820}
+  - {fileID: 8914584839940626433}
   m_Father: {fileID: 4113634767159639156}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

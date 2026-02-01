@@ -16,6 +16,8 @@ public class EnemyMovementSad : EnemyMovement
 
     private bool _facingLeft;
 
+    private GameManager _gameManager;
+
     private void Start()
     {
         if (PlayerTransform.position.x < transform.position.x)
@@ -30,6 +32,14 @@ public class EnemyMovementSad : EnemyMovement
     // Update is called once per frame
     void Update()
     {
+        if (_gameManager == null)
+        {
+            _gameManager = FindAnyObjectByType<GameManager>();
+        }
+        if (!_gameManager.GameIsActive)
+        {
+            return;
+        }
         float distance = (PlayerTransform.position - transform.position).magnitude;
         _waveOffsetCalculated = _waveOffset;
         if (distance < _distanceMaxWaveOffset)

@@ -21,6 +21,7 @@ public class EnemyMovementCalm : EnemyMovement
 
     private bool _facingLeft;
 
+    private GameManager _gameManager;
 
     private void Start()
     {
@@ -41,6 +42,14 @@ public class EnemyMovementCalm : EnemyMovement
 
     void Update()
     {
+        if (_gameManager == null)
+        {
+            _gameManager = FindAnyObjectByType<GameManager>();
+        }
+        if (!_gameManager.GameIsActive)
+        {
+            return;
+        }
         Vector3 playerDirection = (PlayerTransform.position - transform.position).normalized;
         float playerAngle = Mathf.Rad2Deg * Mathf.Atan2(playerDirection.y, playerDirection.x);
 
