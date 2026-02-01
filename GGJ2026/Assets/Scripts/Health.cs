@@ -134,7 +134,7 @@ public class Health : MonoBehaviour
                     else if (_isEnemy)
                     {
                         HandleEnemyRespawn();
-                        _audioManager.PlaySFX(_audioManager.enemyMaskBreak);
+                        _audioManager.PlaySFX(_audioManager.enemyMaskBreak, 0.6f);
                     }
                 }
                 else
