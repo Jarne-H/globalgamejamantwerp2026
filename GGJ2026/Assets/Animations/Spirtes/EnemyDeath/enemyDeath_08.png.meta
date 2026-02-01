@@ -115,8 +115,8 @@ TextureImporter:
       name: enemyDeath_08_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 165
+        x: 34
+        y: 196
         width: 188
         height: 70
       alignment: 0
@@ -137,8 +137,8 @@ TextureImporter:
       name: enemyDeath_08_1
       rect:
         serializedVersion: 2
-        x: 84
-        y: 199
+        x: 95
+        y: 230
         width: 64
         height: 65
       alignment: 0
@@ -159,10 +159,10 @@ TextureImporter:
       name: enemyDeath_08_2
       rect:
         serializedVersion: 2
-        x: 43
-        y: 29
+        x: 54
+        y: 54
         width: 108
-        height: 126
+        height: 132
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,8 +181,8 @@ TextureImporter:
       name: enemyDeath_08_3
       rect:
         serializedVersion: 2
-        x: 108
-        y: 153
+        x: 119
+        y: 184
         width: 17
         height: 12
       alignment: 0
@@ -203,10 +203,10 @@ TextureImporter:
       name: enemyDeath_08_4
       rect:
         serializedVersion: 2
-        x: 120
-        y: 29
-        width: 70
-        height: 94
+        x: 131
+        y: 52
+        width: 75
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

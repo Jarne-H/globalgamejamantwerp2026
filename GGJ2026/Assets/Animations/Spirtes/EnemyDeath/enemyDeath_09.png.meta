@@ -14,9 +14,6 @@ TextureImporter:
   - first:
       213: 2869043827916951822
     second: enemyDeath_09_3
-  - first:
-      213: 4735645723647982023
-    second: enemyDeath_09_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,8 +112,8 @@ TextureImporter:
       name: enemyDeath_09_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 165
+        x: 34
+        y: 196
         width: 188
         height: 70
       alignment: 0
@@ -137,8 +134,8 @@ TextureImporter:
       name: enemyDeath_09_1
       rect:
         serializedVersion: 2
-        x: 84
-        y: 199
+        x: 95
+        y: 230
         width: 64
         height: 65
       alignment: 0
@@ -159,10 +156,10 @@ TextureImporter:
       name: enemyDeath_09_2
       rect:
         serializedVersion: 2
-        x: 43
-        y: 23
-        width: 108
-        height: 132
+        x: 51
+        y: 51
+        width: 162
+        height: 138
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,9 +178,9 @@ TextureImporter:
       name: enemyDeath_09_3
       rect:
         serializedVersion: 2
-        x: 108
-        y: 153
-        width: 17
+        x: 119
+        y: 184
+        width: 20
         height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -195,28 +192,6 @@ TextureImporter:
       bones: []
       spriteID: e0154002924e0d720800000000000000
       internalID: 2869043827916951822
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemyDeath_09_4
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 21
-        width: 75
-        height: 102
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7c9b224f1b468b140800000000000000
-      internalID: 4735645723647982023
       vertices: []
       indices: 
       edges: []
@@ -239,7 +214,6 @@ TextureImporter:
       enemyDeath_09_1: -3541177711921238888
       enemyDeath_09_2: -8132733241624666774
       enemyDeath_09_3: 2869043827916951822
-      enemyDeath_09_4: 4735645723647982023
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

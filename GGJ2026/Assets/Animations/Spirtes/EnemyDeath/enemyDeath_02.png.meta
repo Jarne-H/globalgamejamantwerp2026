@@ -106,8 +106,8 @@ TextureImporter:
       name: enemyDeath_02_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 148
+        x: 21
+        y: 179
         width: 14
         height: 22
       alignment: 0
@@ -128,8 +128,8 @@ TextureImporter:
       name: enemyDeath_02_1
       rect:
         serializedVersion: 2
-        x: 15
-        y: 15
+        x: 26
+        y: 46
         width: 207
         height: 279
       alignment: 0
