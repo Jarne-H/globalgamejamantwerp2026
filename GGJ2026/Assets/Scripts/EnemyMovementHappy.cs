@@ -36,6 +36,8 @@ public class EnemyMovementHappy : EnemyMovement
             GetComponentInChildren<SpriteRenderer>().flipX = false;
             _facingLeft = false;
         }
+        transform.position += _velocityVector * Time.deltaTime;
+
     }
 
     private void FixedUpdate()
@@ -50,6 +52,5 @@ public class EnemyMovementHappy : EnemyMovement
             _velocityVector *= _maxVelocity / _velocityVector.magnitude;
         }
 
-        transform.position += _velocityVector * Time.deltaTime;
     }
 }
