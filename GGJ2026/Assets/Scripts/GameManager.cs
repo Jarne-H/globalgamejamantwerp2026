@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -62,6 +63,9 @@ public class GameManager : MonoBehaviour
 
     private int _score = 0;
     public int Score {  get { return _score; } set { _score = value; } }
+
+    [SerializeField]
+    private TextMeshProUGUI _scoreText;
 
     public bool _speedBoostEnabled = false;
     public bool _invincibilityEnabled = false;
@@ -179,6 +183,12 @@ public class GameManager : MonoBehaviour
         VisualiseMeters();
         SetPlayerColor();
         VisualisePowerUps();
+        UpdateScoreUI();
+    }
+
+    private void UpdateScoreUI()
+    {
+        _scoreText.text = _score.ToString();
     }
 
     private void VisualisePowerUps()
@@ -247,6 +257,12 @@ public class GameManager : MonoBehaviour
         Camera.main.transform.parent = null;
         //delete player from scene
         _playerColor.gameObject.SetActive(false);
+        //save score in PlayerPrefs if it's higher than previous high score
+        int highScore = PlayerPrefs.GetInt("HighScore", 0);
+        if (_score > highScore)
+        {
+            PlayerPrefs.SetInt("HighScore", _score);
+        }
         //wait 0.5 seconds, then go to CUTSCENE scene
         Invoke("MoveToCutScene", 0.5f);
     }
