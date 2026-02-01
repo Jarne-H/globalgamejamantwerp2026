@@ -32,7 +32,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1007287534641887013}
   - {fileID: 7753307009060480747}
@@ -66,6 +66,9 @@ MonoBehaviour:
   - {fileID: 1748639186060500132, guid: d154654016b864042a34a06d0716a938, type: 3}
   - {fileID: 7082634850838212035, guid: a469d14456cd15c469026d1d58b56589, type: 3}
   _gameManager: {fileID: 0}
+  _playerAnimation: {fileID: 0}
+  _maskPopPrefab: {fileID: 0}
+  _enemyBurnPrefab: {fileID: 0}
 --- !u!61 &3474148695173427431
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -244,7 +247,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 150
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7afb5074d384f5f45ac6f6a835fcd11a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

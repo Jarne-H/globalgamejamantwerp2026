@@ -2134,6 +2134,8 @@ MonoBehaviour:
   _requiredValueForBoost: 6
   _speedBoostDuration: 5
   _invincibilityDuration: 5
+  _playerColor: {fileID: 0}
+  _pauseMenu: {fileID: 0}
   _happyMeterSprites:
   - {fileID: 8003620704561138918}
   - {fileID: 3913989033876376903}
@@ -2162,6 +2164,10 @@ MonoBehaviour:
   _sadValue: 0
   _calmValue: 0
   _angryValue: 0
+  _SpeedIcon: {fileID: 0}
+  _ShieldIcon: {fileID: 0}
+  _PiercingIcon: {fileID: 0}
+  _MultishotIcon: {fileID: 0}
   _speedBoostEnabled: 0
   _invincibilityEnabled: 0
   _nextArrowsMultiShot: 0
@@ -3147,14 +3153,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3544510142456306901, guid: 0b70e68505da87341a3b151a608ae2d9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0b70e68505da87341a3b151a608ae2d9, type: 3}
   m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1

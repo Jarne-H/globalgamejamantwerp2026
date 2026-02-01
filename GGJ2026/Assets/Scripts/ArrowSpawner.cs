@@ -30,6 +30,8 @@ public class ArrowSpawner : MonoBehaviour
     private GameManager _gameManager;
     [SerializeField]
     private Animator _bowAnimation;
+    [SerializeField]
+    private int _bowChargingPulseCount = 2;
 
     [Header("PowerUpStuff")]
     [SerializeField]
@@ -108,19 +110,22 @@ public class ArrowSpawner : MonoBehaviour
         {
             _chargingIsReady = true;
             _currentChargingTime = _chargingTime;
+
+            StartCoroutine(BowPulse());
+            _chargePulseCount++;
         }
     }
 
     private void ChargeAnimation()
     {
-        //every 1/3 of charging time, do a pulse
+        //every _bowChargingPulseCount of charging time, do a pulse
         switch (_currentChargingTime)
         {
-            case float n when (n >= (_chargingTime / 3) * (_chargePulseCount + 1)) && (_chargePulseCount < 3):
+            case float n when (n >= (_chargingTime / _bowChargingPulseCount) * (_chargePulseCount + 1)) && (_chargePulseCount < _bowChargingPulseCount):
                 StartCoroutine(BowPulse());
                 _chargePulseCount++;
                 break;
-            case float n when (n < (_chargingTime / 3)):
+            case float n when (n < (_chargingTime / _bowChargingPulseCount)):
                 _chargePulseCount = 0;
                 break;
         }

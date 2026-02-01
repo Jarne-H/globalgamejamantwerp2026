@@ -50,7 +50,15 @@ public class GameManager : MonoBehaviour
     public int _sadValue;
     public int _calmValue;
     public int _angryValue;
-    
+
+    [SerializeField]
+    private GameObject _SpeedIcon;
+    [SerializeField]
+    private GameObject _ShieldIcon;
+    [SerializeField]
+    private GameObject _PiercingIcon;
+    [SerializeField]
+    private GameObject _MultishotIcon;
 
     private int _score = 0;
     public int Score {  get { return _score; } set { _score = value; } }
@@ -83,7 +91,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (_pauseMenu.active)
+        if (_pauseMenu.activeSelf)
         {
             GameIsActive = false;
         }
@@ -170,6 +178,15 @@ public class GameManager : MonoBehaviour
 
         VisualiseMeters();
         SetPlayerColor();
+        VisualisePowerUps();
+    }
+
+    private void VisualisePowerUps()
+    {
+        _SpeedIcon.SetActive(_speedBoostEnabled);
+        _ShieldIcon.SetActive(_invincibilityEnabled);
+        _PiercingIcon.SetActive(_nextArrowsPiercing > 0);
+        _MultishotIcon.SetActive(_nextArrowsMultiShot > 0);
     }
 
     private void SetPlayerColor()
