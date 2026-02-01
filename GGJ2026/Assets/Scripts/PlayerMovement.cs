@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -109,4 +110,13 @@ public class PlayerMovement : MonoBehaviour
             }   
         }
     }
+
+
+    // FOOTSTEP SFX. Failed experiment
+
+    //public void FootstepSfx(int test)
+    //{
+    //    // TODO: call sfx footstep randomized
+    //    Debug.Log("HEREEEE");
+    //}
 }
