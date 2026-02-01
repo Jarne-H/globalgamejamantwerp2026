@@ -440,6 +440,7 @@ MonoBehaviour:
   _enemyPrefabs: []
   _gameManager: {fileID: 0}
   _playerAnimation: {fileID: 8488471270069429414}
+  _maskPopPrefab: {fileID: 393658487323814627, guid: e501832211a979f43a4ca6b98a7c46b4, type: 3}
 --- !u!61 &4535359823340702258
 BoxCollider2D:
   m_ObjectHideFlags: 0

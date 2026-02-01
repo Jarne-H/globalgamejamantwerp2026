@@ -22,17 +22,17 @@ public class MaskPop : MonoBehaviour
             _rb = GetComponent<Rigidbody2D>();
         if(_spriteRenderer == null)
             _spriteRenderer = GetComponent<SpriteRenderer>();
-        //set sprite based on SpriteToUse
-        if(_maskSprites != null && _maskSprites.Length >= SpriteToUse && SpriteToUse > 0)
-        {
-            if(_spriteRenderer != null)
-                _spriteRenderer.sprite = _maskSprites[SpriteToUse - 1];
-        }
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //set sprite based on SpriteToUse
+        if (_maskSprites != null && _maskSprites.Length >= SpriteToUse && SpriteToUse > 0)
+        {
+            if (_spriteRenderer != null)
+                _spriteRenderer.sprite = _maskSprites[SpriteToUse - 1];
+        }
         //shoot in random direction 45deg to the left or right from up
         float angle = Random.Range(-45f, 45f);
         Vector2 direction = Quaternion.Euler(0, 0, angle) * Vector2.up;
