@@ -1255,7 +1255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1066733674689688640, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
       propertyPath: _multishotSpreadAngle
-      value: 90
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1120628111751070857, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
       propertyPath: m_FlipY
@@ -1310,7 +1310,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3410036508780190692, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
+    - {fileID: 6090493987543581324, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ef7204c4a5d214694a80394bfba0c1, type: 3}
@@ -1334,6 +1336,10 @@ PrefabInstance:
     - target: {fileID: 390594881075727839, guid: d8e6398f2d761764bb83fd0f232c20e5, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733262650067175335, guid: d8e6398f2d761764bb83fd0f232c20e5, type: 3}
+      propertyPath: _requiredValueForBoost
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2882612541717575680, guid: d8e6398f2d761764bb83fd0f232c20e5, type: 3}
       propertyPath: m_LocalPosition.x
