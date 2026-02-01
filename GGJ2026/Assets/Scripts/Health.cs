@@ -241,27 +241,28 @@ public class Health : MonoBehaviour
             ++_gameManager._happyValue;
             --_gameManager._sadValue;
             Debug.Log(_gameManager._happyValue);
+            _gameManager._sadValue = Mathf.Clamp(_gameManager._sadValue, 0, 999);
         }
         if (sadEnemy != null)
         {
             ++_gameManager._sadValue;
             --_gameManager._happyValue;
             Debug.Log(_gameManager._sadValue);
-
+            _gameManager._happyValue = Mathf.Clamp(_gameManager._happyValue, 0, 999);
         }
         if (calmEnemy != null)
         {
             ++_gameManager._calmValue;
             --_gameManager._angryValue;
             Debug.Log(_gameManager._calmValue);
-
+            _gameManager._angryValue = Mathf.Clamp(_gameManager._angryValue, 0, 999);
         }
         if (angryEnemy != null)
         {
             ++_gameManager._angryValue;
             --_gameManager._calmValue;
+            _gameManager._calmValue = Mathf.Clamp(_gameManager._calmValue, 0, 999);
             Debug.Log(_gameManager._angryValue);
-
         }
     }
 }
