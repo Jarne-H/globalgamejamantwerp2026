@@ -242,8 +242,16 @@ public class GameManager : MonoBehaviour
             _fade.alpha = Mathf.Lerp(0.0f, 1.0f, timer / _fadeDuration);
         }
         _fade.alpha = 1.0f;
-        //reload the current scene
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        //reload the CUTSCENE scene
+        //wait 0.5 seconds, then go to CUTSCENE scene
+        //delete player from scene
+        _playerColor.gameObject.SetActive(false);
+        Invoke("MoveToCutScene", 0.5f);
+    }
+
+    private void MoveToCutScene()
+    {
+               UnityEngine.SceneManagement.SceneManager.LoadScene("Cutscene");
     }
 
     private void SpeedBoost()

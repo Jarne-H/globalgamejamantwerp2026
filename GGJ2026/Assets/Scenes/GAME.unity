@@ -460,7 +460,7 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
+  m_DrawMode: 2
   m_Size: {x: 1500, y: 1500}
   m_AdaptiveModeThreshold: 1
   m_SpriteTileMode: 1
@@ -583,7 +583,7 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
+  m_DrawMode: 2
   m_Size: {x: 1500, y: 1500}
   m_AdaptiveModeThreshold: 1
   m_SpriteTileMode: 1
@@ -673,7 +673,7 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
+  m_DrawMode: 2
   m_Size: {x: 1500, y: 1500}
   m_AdaptiveModeThreshold: 1
   m_SpriteTileMode: 1
@@ -847,7 +847,7 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
+  m_DrawMode: 2
   m_Size: {x: 1500, y: 1500}
   m_AdaptiveModeThreshold: 1
   m_SpriteTileMode: 1
@@ -1105,7 +1105,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   musicSource: {fileID: 12373032}
   SFXSource: {fileID: 75318788}
-  SFXLoopSource: {fileID: 979167828}
   background: {fileID: 8300000, guid: 9c703f62fec6bee46b6ddf58db5b3f37, type: 3}
   bowCharge: {fileID: 8300000, guid: 1962b553ab4b8144f9ee1429e7ba5a25, type: 3}
   bowReady: {fileID: 8300000, guid: 9520da344a5bea044965924c891715a3, type: 3}
@@ -1218,7 +1217,7 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
+  m_DrawMode: 2
   m_Size: {x: 1500, y: 1500}
   m_AdaptiveModeThreshold: 1
   m_SpriteTileMode: 1
@@ -1313,7 +1312,7 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
+  m_DrawMode: 2
   m_Size: {x: 1500, y: 1500}
   m_AdaptiveModeThreshold: 1
   m_SpriteTileMode: 1
@@ -1460,7 +1459,7 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
+  m_DrawMode: 2
   m_Size: {x: 1500, y: 1500}
   m_AdaptiveModeThreshold: 1
   m_SpriteTileMode: 1
@@ -1727,7 +1726,7 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
+  m_DrawMode: 2
   m_Size: {x: 1500, y: 1500}
   m_AdaptiveModeThreshold: 1
   m_SpriteTileMode: 1
@@ -1975,10 +1974,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8839311934322919319, guid: d8e6398f2d761764bb83fd0f232c20e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9059363745046044181, guid: d8e6398f2d761764bb83fd0f232c20e5, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9189845635618225124, guid: d8e6398f2d761764bb83fd0f232c20e5, type: 3}
