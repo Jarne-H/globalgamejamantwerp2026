@@ -3,7 +3,7 @@ using UnityEngine;
 public class SillyEnemy : MonoBehaviour
 {
     [SerializeField]
-    private float _moveSpeed;
+    private float _moveSpeed = 2;
     [SerializeField]
     private bool _flipX = false;
 
